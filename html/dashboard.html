@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | SNE VAULT</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../responsiveness.css">
+</head>
+<body class="dashboard-page">
+    <div class="dashboard-shell">
+        <aside class="dashboard-sidebar" id="dashboard-sidebar">
+            <div class="dashboard-header-row"><a class="dashboard-brand" href="home.html">SNE <span>VAULT</span></a><button class="mobile-menu-toggle dashboard-menu-toggle" type="button" data-menu="dashboard-sidebar" aria-expanded="false" aria-controls="dashboard-sidebar"><i class="bi bi-list" aria-hidden="true"></i><i class="bi bi-x-lg" aria-hidden="true"></i><span class="menu-label">Menu</span></button></div>
+            <div class="dashboard-dropdown">
+            <p class="sidebar-label">Workspace</p>
+            <nav class="dashboard-nav" aria-label="Dashboard navigation">
+                <a class="dashboard-nav-link active" href="dashboard.html"><i class="bi bi-grid-1x2-fill" aria-hidden="true"></i>Overview</a>
+                <a class="dashboard-nav-link" href="category.html"><i class="bi bi-grid" aria-hidden="true"></i>Browse accounts</a>
+                <a class="dashboard-nav-link" href="orders.html"><i class="bi bi-receipt" aria-hidden="true"></i>Orders</a>
+                <a class="dashboard-nav-link" href="download.html"><i class="bi bi-download" aria-hidden="true"></i>Downloads</a>
+                <a class="dashboard-nav-link" href="wallet.html"><i class="bi bi-wallet2" aria-hidden="true"></i>Wallet</a>
+            </nav>
+            <p class="sidebar-label resources-label">Resources</p>
+            <nav class="dashboard-resource-links" aria-label="Resources">
+                <a href="#"><i class="bi bi-bell" aria-hidden="true"></i>News</a>
+                <a href="faq.html"><i class="bi bi-question-circle" aria-hidden="true"></i>FAQ</a>
+                <a href="privacy-policy.html"><i class="bi bi-shield-lock" aria-hidden="true"></i>Privacy policy</a>
+                <a href="contact.html"><i class="bi bi-headset" aria-hidden="true"></i>Contact</a>
+                <a href="about.html"><i class="bi bi-info-circle" aria-hidden="true"></i>About us</a>
+            </nav>
+            <div class="sidebar-help"><p class="sidebar-label">Need help?</p><p>Our support team is ready to help with your order.</p><a href="contact.html">Contact support</a></div>
+            <a class="dashboard-logout" href="home.html"><i class="bi bi-box-arrow-left" aria-hidden="true"></i> Log out</a>
+            </div>
+        </aside>
+
+        <main class="dashboard-main">
+            <header class="dashboard-topbar"><div><p class="eyebrow">Account market</p><h1>Good morning, welcome back.</h1></div><div class="dashboard-topbar-actions"><a class="marketplace-link" href="home.html">Marketplace</a><a class="browse-button" href="category.html">Browse accounts</a></div></header>
+            <section class="dashboard-stats" aria-label="Account overview">
+                <article class="overview-stat"><span class="stat-caption">Total orders</span><strong>12</strong><span class="stat-note positive">+3 this month</span></article>
+                <article class="overview-stat"><span class="stat-caption">Active accounts</span><strong>08</strong><span class="stat-note">Ready to download</span></article>
+                <article class="overview-stat"><span class="stat-caption">Saved accounts</span><strong>24</strong><span class="stat-note">Across 4 categories</span></article>
+            </section>
+            <section class="dashboard-section" id="recent-orders">
+                <div class="section-heading"><div><p class="eyebrow">Your activity</p><h2>Recent orders</h2></div><a href="orders.html">View all orders</a></div>
+                <div class="orders-table">
+                    <div class="order-row order-heading"><span>Account</span><span>Category</span><span>Status</span><span>Price</span></div>
+                    <div class="order-row"><div class="order-account"><span class="account-mark instagram-mark">IG</span><span>Softwreck Niche A</span></div><span>Instagram</span><span class="status ready">Ready</span><strong>$15.00</strong></div>
+                    <div class="order-row"><div class="order-account"><span class="account-mark tiktok-mark">TK</span><span>Organic Creator</span></div><span>TikTok</span><span class="status delivered">Delivered</span><strong>$8.00</strong></div>
+                    <div class="order-row"><div class="order-account"><span class="account-mark facebook-mark">FB</span><span>Aged Profile</span></div><span>Facebook</span><span class="status delivered">Delivered</span><strong>$12.00</strong></div>
+                </div>
+            </section>
+            <section class="dashboard-section recommendations"><div class="section-heading"><div><p class="eyebrow">Curated for you</p><h2>Explore categories</h2></div><span class="scroll-hint"><i class="bi bi-arrow-left-right" aria-hidden="true"></i> Scroll to explore</span></div><div class="category-preview-grid"><a class="category-preview facebook-preview" href="category.html"><i class="bi bi-facebook" aria-hidden="true"></i><span>Facebook</span><strong>90+ accounts</strong></a><a class="category-preview instagram-preview" href="category.html"><i class="bi bi-instagram" aria-hidden="true"></i><span>Instagram</span><strong>120+ accounts</strong></a><a class="category-preview x-preview" href="category.html"><strong class="brand-letter">X</strong><span>X / Twitter</span><strong>45+ accounts</strong></a><a class="category-preview tiktok-preview" href="category.html"><i class="bi bi-tiktok" aria-hidden="true"></i><span>TikTok</span><strong>80+ accounts</strong></a><a class="category-preview gmail-preview" href="category.html"><i class="bi bi-envelope-at" aria-hidden="true"></i><span>Gmail</span><strong>60+ accounts</strong></a><a class="category-preview google-voice-preview" href="category.html#google-voice"><i class="bi bi-telephone" aria-hidden="true"></i><span>Google Voice</span><strong>20+ numbers</strong></a><a class="category-preview discord-preview" href="category.html"><i class="bi bi-discord" aria-hidden="true"></i><span>Discord</span><strong>35+ accounts</strong></a><a class="category-preview vpn-preview" href="category.html#vpn"><i class="bi bi-shield-lock" aria-hidden="true"></i><span>VPN</span><strong>45+ services</strong></a><a class="category-preview threads-preview" href="category.html"><strong class="brand-letter">@</strong><span>Threads</span><strong>25+ accounts</strong></a><a class="category-preview codm-preview" href="category.html"><i class="bi bi-controller" aria-hidden="true"></i><span>CODM</span><strong>40+ accounts</strong></a><a class="category-preview freefire-preview" href="category.html"><i class="bi bi-fire" aria-hidden="true"></i><span>Free Fire</span><strong>30+ accounts</strong></a></div></section>
+            <section class="dashboard-section marketplace-additions"><div class="section-heading"><div><p class="eyebrow">New marketplace options</p><h2>Google Voice and VPNs</h2></div><a href="category.html#google-voice">Shop all</a></div><div class="dashboard-product-grid"><a class="dashboard-product google-voice-product" href="category.html#google-voice"><span class="product-icon"><i class="bi bi-telephone" aria-hidden="true"></i></span><span><strong>Google Voice</strong><small>US numbers ready to use</small></span><b>Shop</b></a><a class="dashboard-product vpn-product" href="category.html#vpn-residential"><span class="product-icon"><i class="bi bi-shield-lock" aria-hidden="true"></i></span><span><strong>Express VPN</strong><small>Private residential access</small></span><b>Shop</b></a><a class="dashboard-product vpn-product" href="category.html#vpn-mobile"><span class="product-icon"><i class="bi bi-phone" aria-hidden="true"></i></span><span><strong>Nord VPN</strong><small>Mobile connection access</small></span><b>Shop</b></a><a class="dashboard-product vpn-product" href="category.html#vpn-premium"><span class="product-icon"><i class="bi bi-stars" aria-hidden="true"></i></span><span><strong>Proton VPN</strong><small>Extended premium access</small></span><b>Shop</b></a></div></section>
+            <details class="login-guide" id="login-guide">
+                <summary><span><p class="eyebrow">After your purchase</p><strong>Watch how to Login your purchased account</strong></span><b>+</b></summary>
+                <div class="video-frame"><iframe src="https://www.youtube.com/embed/VIDEO_ID" title="How to access your purchased account" allowfullscreen></iframe></div>
+            </details>
+        </main>
+
+        <aside class="dashboard-rightbar">
+            <div class="profile-summary"><span class="profile-avatar">JD</span><div><strong>Elias Etinge</strong><span>Premium member</span></div><button aria-label="Open profile menu">...</button></div>
+            <section class="balance-panel"><div class="section-heading compact"><span><i class="bi bi-wallet2" aria-hidden="true"></i> Account balance</span><span class="balance-dot"></span></div><strong class="balance-amount">$248.50</strong><p>Available to spend on accounts</p><a class="fund-button" href="wallet.html"><i class="bi bi-plus-lg" aria-hidden="true"></i> Add funds</a><div class="balance-footer"><span>Last deposit</span><strong>Aug 18, 2026</strong></div></section>
+            <section class="quick-panel"><div class="section-heading compact"><span>Quick actions</span></div><a class="quick-action" href="category.html"><span class="action-icon"><i class="bi bi-bag-plus" aria-hidden="true"></i></span><span><strong>Buy an account</strong><small>Find your next account</small></span><b><i class="bi bi-chevron-right" aria-hidden="true"></i></b></a><a class="quick-action" href="wallet.html"><span class="action-icon"><i class="bi bi-wallet2" aria-hidden="true"></i></span><span><strong>Manage wallet</strong><small>Review your transactions</small></span><b><i class="bi bi-chevron-right" aria-hidden="true"></i></b></a><a class="quick-action" href="contact.html"><span class="action-icon"><i class="bi bi-ticket-perforated" aria-hidden="true"></i></span><span><strong>Support tickets</strong><small>Get help with an order</small></span><b><i class="bi bi-chevron-right" aria-hidden="true"></i></b></a></section>
+            <div class="trust-note"><strong>Protected marketplace</strong><p>Every account is checked before it reaches your dashboard.</p></div>
+        </aside>
+    </div>
+    <a class="whatsapp-float" href="https://wa.me/237652717609?text=Hello%20SNE%20VAULT%20support%2C%20I%20need%20help%20accessing%20an%20account%20I%20purchased." target="_blank" rel="noopener" aria-label="Contact WhatsApp support">
+        <span class="whatsapp-icon"><i class="bi bi-whatsapp" aria-hidden="true"></i></span>
+        <span class="whatsapp-label">Need help? Chat with us</span>
+    </a>
+    <script src="../mobile-menu.js"></script>
+</body>
+</html>git

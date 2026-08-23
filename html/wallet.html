@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet | SNE VAULT</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../responsiveness.css">
+</head>
+<body class="wallet-page">
+       <header class="legal-header">
+        <a class="logo" href="home.html">SNE VAULT</a>
+    </header>
+    <main class="wallet-container">
+        <div class="page-navigation"><a class="wallet-back-link" href="dashboard.html" onclick="if (history.length > 1) { history.back(); return false; }">&larr; Previous page</a><a class="dashboard-home-link" href="dashboard.html"><i class="bi bi-grid-1x2" aria-hidden="true"></i> Dashboard</a></div>
+        <div class="wallet-heading">
+            <div><p class="eyebrow">SNE VAULT WALLET</p><h1>Add funds</h1><p>Choose a secure payment method to fund your account.</p></div>
+            <div class="wallet-balance"><span>Current balance</span><strong>$248.50</strong></div>
+        </div>
+
+        <form class="funding-form">
+            <section class="funding-section">
+                <div class="funding-section-heading"><span class="step-number">1</span><div><h2>Enter amount</h2><p>How much would you like to add?</p></div></div>
+                <label class="amount-label" for="funding-amount">Amount in USD</label>
+                <div class="amount-input"><span>$</span><input id="funding-amount" type="number" min="1" step="0.01" placeholder="0.00" required></div>
+                <div class="amount-suggestions"><button type="button">$25</button><button type="button">$50</button><button type="button">$100</button><button type="button">$250</button></div>
+            </section>
+
+            <section class="funding-section">
+                <div class="funding-section-heading"><span class="step-number">2</span><div><h2>Choose payment method</h2><p>Select how you want to fund your wallet.</p></div></div>
+                <div class="payment-methods">
+                    <label class="payment-option"><input type="radio" name="payment-method" value="orange-money" required><span class="payment-icon orange-icon">OM</span><span><strong>Orange Money</strong><small>Mobile payment</small></span></label>
+                    <label class="payment-option"><input type="radio" name="payment-method" value="mtn-mobile-money"><span class="payment-icon mtn-icon">MTN</span><span><strong>MTN Mobile Money</strong><small>Mobile payment</small></span></label>
+                    <label class="payment-option"><input type="radio" name="payment-method" value="card"><span class="payment-icon card-icon">CARD</span><span><strong>Visa / Mastercard</strong><small>Debit or credit card</small></span></label>
+                    <label class="payment-option"><input type="radio" name="payment-method" value="usdt"><span class="payment-icon usdt-icon">₮</span><span><strong>USDT</strong><small>Choose a network below</small></span></label>
+                </div>
+                <fieldset class="network-options"><legend>USDT network</legend><label><input type="radio" name="usdt-network" value="trc20"> TRC20</label><label><input type="radio" name="usdt-network" value="erc20"> ERC20</label></fieldset>
+            </section>
+
+            <div class="funding-notice"><strong>Payment instructions</strong><p>After you continue, you will receive the payment details for your selected method. Your balance will update after payment confirmation.</p></div>
+            <button class="deposit-btn" type="submit">Continue to payment</button>
+        </form>
+    </main>
+</body>
+</html>

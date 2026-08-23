@@ -1,0 +1,18 @@
+SNE VAULT ORDER RECEIPT
+=======================
+
+Order number: SNV-1048
+Product: Facebook Aged 2020
+Platform: Facebook
+Status: Ready
+Purchase date: August 18, 2026
+Price: $18.00
+
+Account details:
+- Registered: 2020
+- Email access: Included
+- IP region: USA
+- 2FA: Setup guidance included
+
+For account-access support, visit contact.html or contact SNE VAULT support.
+Keep this file private. Never share passwords or security codes.

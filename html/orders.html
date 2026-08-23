@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders | SNE VAULT</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../responsiveness.css">
+</head>
+<body class="orders-page">
+    <header class="catalog-header"><a class="logo" href="home.html">SNE VAULT</a><button class="mobile-menu-toggle" type="button" data-menu="catalog-nav" aria-expanded="false" aria-controls="catalog-nav"><i class="bi bi-list" aria-hidden="true"></i><i class="bi bi-x-lg" aria-hidden="true"></i><span>Menu</span></button><nav id="catalog-nav"><a href="home.html">Home</a><a href="dashboard.html">Dashboard</a><a href="contact.html">Support</a></nav></header>
+    <main class="orders-container">
+        <div class="page-navigation"><a class="catalog-back-link" href="dashboard.html" onclick="if (history.length > 1) { history.back(); return false; }">&larr; Previous page</a><a class="dashboard-home-link" href="dashboard.html"><i class="bi bi-grid-1x2" aria-hidden="true"></i> Dashboard</a></div>
+        <div class="orders-page-heading"><div><p class="eyebrow">PURCHASE HISTORY</p><h1>Your orders</h1><p>Review your purchases and download an order receipt as a text file.</p></div><a class="browse-button" href="category.html">Buy another account</a></div>
+        <section class="order-records">
+            <article class="order-record"><div class="order-record-heading"><div><span class="order-number">ORDER #SNV-1048</span><h2>Facebook Aged 2020</h2></div><span class="status ready">Ready</span></div><div class="order-record-meta"><span><i class="bi bi-calendar3" aria-hidden="true"></i> Aug 18, 2026</span><span><i class="bi bi-facebook" aria-hidden="true"></i> Facebook</span><strong>$18.00</strong></div><p>Registered in 2020 with email access included. USA IP region and 2FA setup guidance.</p><div class="order-record-actions"><a class="download-order-button" href="../order-SNV-1048.txt" download="SNE-VAULT-ORDER-SNV-1048.txt"><i class="bi bi-file-earmark-arrow-down" aria-hidden="true"></i> Download order as TXT</a><a class="order-support-link" href="contact.html">Need help?</a></div></article>
+            <article class="order-record"><div class="order-record-heading"><div><span class="order-number">ORDER #SNV-1039</span><h2>TikTok Organic Creator</h2></div><span class="status delivered">Delivered</span></div><div class="order-record-meta"><span><i class="bi bi-calendar3" aria-hidden="true"></i> Aug 12, 2026</span><span><i class="bi bi-tiktok" aria-hidden="true"></i> TikTok</span><strong>$8.00</strong></div><p>Organic creator account with email access and account-access guidance included.</p><div class="order-record-actions"><a class="download-order-button" href="../order-SNV-1039.txt" download="SNE-VAULT-ORDER-SNV-1039.txt"><i class="bi bi-file-earmark-arrow-down" aria-hidden="true"></i> Download order as TXT</a><a class="order-support-link" href="contact.html">Need help?</a></div></article>
+        </section>
+        <div class="orders-privacy-note"><i class="bi bi-shield-lock" aria-hidden="true"></i><span><strong>Keep downloaded files private.</strong> Store your order details on a trusted device and never share passwords or security codes.</span></div>
+    </main>
+    <script src="../mobile-menu.js"></script>
+</body>
+</html>

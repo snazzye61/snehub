@@ -1,0 +1,17 @@
+SNE VAULT ORDER RECEIPT
+=======================
+
+Order number: SNV-1039
+Product: TikTok Organic Creator
+Platform: TikTok
+Status: Delivered
+Purchase date: August 12, 2026
+Price: $8.00
+
+Account details:
+- Type: Organic creator account
+- Email access: Included
+- Access guide: Included
+
+For account-access support, visit contact.html or contact SNE VAULT support.
+Keep this file private. Never share passwords or security codes.
