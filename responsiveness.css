@@ -126,9 +126,11 @@ button, .browse-button, .fund-button, .deposit-btn, .buy-account-button, .downlo
 /* Mobile hamburger navigation */
 .mobile-menu-toggle { display: none; align-items: center; justify-content: center; gap: 7px; min-height: 42px; padding: 8px 12px; border: 1px solid #2b3b56; border-radius: 6px; background: #172b50; color: #dbeafe; cursor: pointer; font-size: 12px; }
 .mobile-menu-toggle i { font-size: 18px; }
+.mobile-menu-toggle .bi-list { display: inline-block; }
 .mobile-menu-toggle .bi-x-lg { display: none; }
 .mobile-menu-toggle.is-open .bi-list { display: none; }
-.mobile-menu-toggle.is-open .bi-x-lg { display: inline-block; }
+.mobile-menu-toggle.is-open .bi-x-lg { display: inline-block !important; }
+.mobile-menu-toggle.is-open span { display: none; }
 
 @media (max-width: 600px) {
   .mobile-menu-toggle { display: inline-flex; }
