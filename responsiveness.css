@@ -42,10 +42,17 @@ button, .browse-button, .fund-button, .deposit-btn, .buy-account-button, .downlo
   .order-account span:last-child { overflow-wrap: anywhere; }
   .category-preview-grid .category-preview { flex-basis: 140px; }
   .contact-grid, .about-values, .downloads-summary, .payment-methods { grid-template-columns: 1fr; }
-  .legal-header, .catalog-header { align-items: flex-start; flex-direction: column; gap: 16px; padding: 18px 16px; }
+  .public-header, .legal-header, .catalog-header { width: 100vw; margin: 0; margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw); padding: 8px 12px; }
+  .public-header { position: sticky; top: 0; left: 0; right: 0; display: flex; align-items: center; justify-content: space-between; border-top: 0; border-radius: 0; }
+  .public-header .logo { margin-right: 0; }
+  .public-header .mobile-menu-toggle { margin-left: auto; }
+  .public-header .btn-register { display: inline-flex; min-width: 92px; margin-left: 0; }
+  .public-header nav { display: none; }
+  .public-header.mobile-menu-open nav { display: grid; right: 12px; }
+  .legal-header, .catalog-header { align-items: flex-start; flex-direction: column; gap: 16px; }
   .legal-header nav, .catalog-header nav { width: 100%; flex-wrap: wrap; gap: 10px 14px; }
   .legal-header nav a, .catalog-header nav a { min-height: 36px; display: inline-flex; align-items: center; }
-  .legal-content, .catalog-container, .downloads-container, .orders-container, .purchase-container, .wallet-container { width: calc(100% - 28px); padding-top: 28px; }
+  .legal-content, .catalog-container, .downloads-container, .orders-container, .purchase-container, .wallet-container { width: calc(100% - 20px); margin-left: auto; margin-right: auto; padding-top: 28px; }
   .legal-content h1, .catalog-heading h1, .downloads-heading h1, .orders-page-heading h1 { font-size: 29px; line-height: 1.15; }
   .catalog-heading, .downloads-heading, .orders-page-heading, .wallet-heading { align-items: flex-start; flex-direction: column; }
   .secure-note, .wallet-balance { width: 100%; }
@@ -96,8 +103,20 @@ button, .browse-button, .fund-button, .deposit-btn, .buy-account-button, .downlo
 .catalog-platform .subcategory-tabs a { display: flex; align-items: center; min-height: 44px; width: 100%; }
 
 @media (max-width: 600px) {
-  .catalog-platform .subcategory-tabs { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 8px; }
-  .catalog-platform .subcategory-tabs a { flex: 0 0 auto; white-space: nowrap; }
+  .catalog-platform .subcategory-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: visible;
+    padding-bottom: 0;
+    width: calc(100% - 4px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .catalog-platform .subcategory-tabs a {
+    flex: 1 1 auto;
+    white-space: normal;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -124,12 +143,12 @@ button, .browse-button, .fund-button, .deposit-btn, .buy-account-button, .downlo
   .public-header:not(.mobile-menu-open) nav,
   .catalog-header:not(.mobile-menu-open) nav { display: none; }
   .public-header.mobile-menu-open nav,
-  .catalog-header.mobile-menu-open nav { display: grid; position: absolute; top: calc(100% + 8px); right: 16px; z-index: 20; width: min(220px, calc(100vw - 32px)); gap: 0; padding: 8px; border: 1px solid #2b3b56; border-radius: 8px; background: #111827; box-shadow: 0 12px 28px rgba(0, 0, 0, .35); }
+  .catalog-header.mobile-menu-open nav { display: grid; position: absolute; top: calc(100% + 8px); right: 12px; z-index: 20; width: min(220px, calc(100vw - 24px)); gap: 0; padding: 8px; border: 1px solid #2b3b56; border-radius: 8px; background: #111827; box-shadow: 0 12px 28px rgba(0, 0, 0, .35); }
   .public-header.mobile-menu-open nav a,
   .catalog-header.mobile-menu-open nav a { display: flex; align-items: center; min-height: 42px; padding: 8px 10px; border-radius: 5px; }
   .public-header.mobile-menu-open nav a:hover,
   .catalog-header.mobile-menu-open nav a:hover { background: #172b50; }
-  .public-header .mobile-menu-toggle { margin-left: auto; }
+  .public-header .mobile-menu-toggle { margin-left: 0; }
   .catalog-header { flex-wrap: wrap; }
   .catalog-header .mobile-menu-toggle { margin-left: auto; }
 }

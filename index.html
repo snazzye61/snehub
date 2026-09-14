@@ -6,12 +6,16 @@
     <title>Account Market</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsiveness.css">
+    <link rel="icon" href="logo.png" type="image/png">
 </head>
 <body>
 
 <header class="public-header">
     <div class="logo">SNE VAULT</div>
-    <button class="mobile-menu-toggle public-menu-toggle" type="button" data-menu="public-nav" aria-expanded="false" aria-controls="public-nav"><i class="bi bi-list" aria-hidden="true"></i><i class="bi bi-x-lg" aria-hidden="true"></i><span>Menu</span></button>
+    <div class="header-actions">
+        <a href="register.html" class="btn-register">Register</a>
+        <button class="mobile-menu-toggle public-menu-toggle" type="button" data-menu="public-nav" aria-expanded="false" aria-controls="public-nav"><i class="bi bi-list" aria-hidden="true"></i><i class="bi bi-x-lg" aria-hidden="true"></i><span>Menu</span></button>
+    </div>
 
     <nav id="public-nav">
         <a href="index.html">Home</a>
@@ -20,62 +24,109 @@
         <a href="contact.html">Contact</a>
         <a href="about.html">About us</a>
         <a href="login.html" class="btn-login">Login</a>
-        <a href="register.html" class="btn-register">Register</a>
     </nav>
 </header>
 
-<section class="hero">
-    <h1>Premium Social Media Accounts Marketplace</h1>
-    <p>Buy verified and high-quality accounts instantly.</p>
-<div class="category-container">
-     <button class="category-btn" id="dropdown-menu">
-        Select Category ▼
-    </button>
+<main class="landing-page">
+    <section class="hero">
+        <div class="hero-copy">
+            <span class="eyebrow">Secure marketplace</span>
+            <h1>Find trusted accounts for your next big move.</h1>
+            <p>Buy verified social media, Gmail, and VPN accounts from a marketplace built for speed, security, and peace of mind.</p>
 
-    <div id="dropdownmenu" class="dropdown-menu" >
-        <a href="#">Facebook</a>
-        <a href="#">Instagram</a>
-        <a href="#">Gmail</a>
-        <a href="#">Telegram</a>
-        <a href="#">Tiktok</a>
-    </div>
-</div>
-   
-</section>
+            <div class="hero-actions">
+                <a href="category.html" class="primary-button">Browse accounts</a>
+                <a href="contact.html" class="secondary-button">Talk to support</a>
+            </div>
 
-<section class="categories">
-
-    <h2>Popular Categories</h2>
-
-    <div class="category-grid">
-
-        <div class="card">
-            <h3>Instagram Accounts</h3>
-            <p>High quality Instagram accounts.</p>
-            <button>View Accounts</button>
+            <div class="hero-badges">
+                <span><i class="bi bi-shield-check"></i> Verified listings</span>
+                <span><i class="bi bi-bolt"></i> Instant access</span>
+                <span><i class="bi bi-headset"></i> 24/7 support</span>
+            </div>
         </div>
 
-        <div class="card">
-            <h3>TikTok Accounts</h3>
-            <p>Organic TikTok accounts ready for use.</p>
-            <button>View Accounts</button>
+        <div class="hero-visual">
+            <div class="hero-glow"></div>
+            <div class="hero-image-card">
+                <img src="home-pic.png" alt="Professional holding a phone showing SNE VAULT brand">
+            </div>
+            <div class="floating-card">
+                <span class="badge"><i class="bi bi-check-circle-fill"></i> Trusted</span>
+                <strong>12k+ verified buyers</strong>
+            </div>
+        </div>
+    </section>
+
+    <section class="auth-cta" aria-label="Account access">
+        <div class="auth-cta-copy">
+            <p class="eyebrow">Account access</p>
+            <h2>Ready to buy or manage your account?</h2>
+        </div>
+        <div class="auth-cta-actions">
+            <a href="login.html" class="primary-button">Sign in</a>
+            <a href="register.html" class="secondary-button">Create account</a>
+        </div>
+    </section>
+
+    <section class="market-highlights">
+        <article class="highlight-card">
+            <i class="bi bi-shield-lock"></i>
+            <h3>Secure</h3>
+            <p>Every listing is screened for safety and quality before it reaches you.</p>
+        </article>
+        <article class="highlight-card">
+            <i class="bi bi-lightning-charge"></i>
+            <h3>Fast</h3>
+            <p>Get ready-to-use accounts quickly without the usual marketplace delays.</p>
+        </article>
+        <article class="highlight-card">
+            <i class="bi bi-wallet2"></i>
+            <h3>Simple</h3>
+            <p>Clear pricing, quick checkout, and friendly support throughout the process.</p>
+        </article>
+    </section>
+
+    <section class="categories">
+        <div class="section-heading">
+            <div>
+                <p class="eyebrow">Popular categories</p>
+                <h2>Explore the market</h2>
+            </div>
+            <a href="category.html">View all</a>
         </div>
 
-        <div class="card">
-            <h3>Facebook Accounts</h3>
-            <p>Verified Facebook profiles.</p>
-            <button>View Accounts</button>
+        <div class="category-grid">
+            <div class="card">
+                <span class="card-icon instagram-icon"><i class="bi bi-instagram"></i></span>
+                <h3>Instagram Accounts</h3>
+                <p>High quality Instagram accounts for creators and businesses.</p>
+                <a href="category.html" class="card-button">View Accounts</a>
+            </div>
+
+            <div class="card">
+                <span class="card-icon tiktok-icon"><i class="bi bi-tiktok"></i></span>
+                <h3>TikTok Accounts</h3>
+                <p>Organic TikTok accounts ready for use and growth.</p>
+                <a href="category.html" class="card-button">View Accounts</a>
+            </div>
+
+            <div class="card">
+                <span class="card-icon facebook-icon"><i class="bi bi-facebook"></i></span>
+                <h3>Facebook Accounts</h3>
+                <p>Verified Facebook profiles for personal and professional use.</p>
+                <a href="category.html" class="card-button">View Accounts</a>
+            </div>
+
+            <div class="card">
+                <span class="card-icon gmail-icon"><i class="bi bi-envelope-at"></i></span>
+                <h3>Gmail Accounts</h3>
+                <p>Phone verified Gmail accounts with smooth setup flow.</p>
+                <a href="category.html" class="card-button">View Accounts</a>
+            </div>
         </div>
-
-        <div class="card">
-            <h3>Gmail Accounts</h3>
-            <p>Phone verified Gmail accounts.</p>
-            <button>View Accounts</button>
-        </div>
-
-    </div>
-
-</section>
+    </section>
+</main>
 
 <footer>
     <p>&copy; 2026 SNE VAULT. All Rights Reserved.</p>
