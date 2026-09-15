@@ -50,5 +50,9 @@
         quantityInput.addEventListener('input', updateTotal);
         document.getElementById('purchase-form').addEventListener('submit', (event) => { event.preventDefault(); confirmation.hidden = false; confirmation.textContent = `Purchase request received for ${quantityInput.value} ${productName} account(s), total $${(unitPrice * Number(quantityInput.value)).toFixed(2)}. Continue to payment to complete your order.`; });
     </script>
+    <a class="whatsapp-float" href="https://wa.me/237652717609?text=Hello%20SNE%20VAULT%20support%2C%20I%20need%20help%20with%20a%20purchase." target="_blank" rel="noopener" aria-label="Contact WhatsApp support">
+        <span class="whatsapp-icon"><i class="bi bi-whatsapp" aria-hidden="true"></i></span>
+        <span class="whatsapp-label">Need help? Chat with us</span>
+    </a>
 </body>
 </html>
