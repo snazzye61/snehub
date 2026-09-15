@@ -1217,3 +1217,106 @@ button, .browse-button, .fund-button, .deposit-btn, .buy-account-button, .downlo
 .suggestion-item strong {
     color: #111;
 }
+
+/* Auth forms */
+.auth-page {
+    min-height: 100vh;
+    padding: 0;
+    background: #08111f;
+}
+
+.auth-page header {
+    z-index: 2;
+}
+
+.auth-page .form-container {
+    min-height: 100vh;
+    height: auto;
+    padding: 118px 20px 110px;
+}
+
+.auth-form {
+    width: min(100%, 410px);
+    padding: 30px;
+    border: 1px solid #263b5a;
+    border-radius: 14px;
+    background: linear-gradient(145deg, #172a49, #101c31);
+    box-shadow: 0 22px 55px rgba(0, 0, 0, .32);
+}
+
+.auth-brand {
+    display: grid;
+    justify-items: center;
+    gap: 9px;
+    margin-bottom: 22px;
+    color: #8da6c7;
+    font-size: 11px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+}
+
+.auth-brand img {
+    width: 92px;
+    height: 92px;
+    border: 1px solid rgba(96, 165, 250, .42);
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 0 6px rgba(37, 99, 235, .08), 0 12px 25px rgba(0, 0, 0, .25);
+}
+
+.auth-form h2 {
+    margin: 20px 0 7px;
+    color: #f8fbff;
+    font-size: 27px;
+    letter-spacing: -.3px;
+}
+
+.auth-intro {
+    margin-bottom: 22px;
+    color: #9fb2cb;
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+.auth-form label {
+    display: block;
+    margin: 0 0 7px;
+    color: #dbeafe;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.auth-form input {
+    margin-bottom: 16px;
+    border: 1px solid #304767;
+    outline: 0;
+    background: #0d1a2d;
+    color: #f8fbff;
+    font: inherit;
+}
+
+.auth-form input::placeholder { color: #7186a3; }
+.auth-form input:focus { border-color: #60a5fa; box-shadow: 0 0 0 3px rgba(96, 165, 250, .14); }
+
+.auth-form button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 5px;
+    background: #2563eb;
+    font-size: 14px;
+    font-weight: 700;
+    transition: background-color .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+
+.auth-form button:hover { background: #3478f1; box-shadow: 0 9px 22px rgba(37, 99, 235, .28); transform: translateY(-2px); }
+
+.auth-switch {
+    margin-top: 22px;
+    color: #91a5bf;
+    font-size: 12px;
+    text-align: center;
+}
+
+.auth-switch a { margin-left: 4px; color: #7dd3fc; font-weight: 700; }

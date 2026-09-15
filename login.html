@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="responsiveness.css">
      <link rel="icon" href="logo.png" type="image/png">
 </head>
-<body>
+<body class="auth-page">
 
     
 <header>
@@ -17,20 +17,27 @@
 
 
 <div class="form-container">
-<p>Login page</p>
     <form class="auth-form">
-        <a class="log-home" href="index.html">Home</a>
+        <div class="auth-brand">
+            <img src="logo.jpg" alt="SNE VAULT logo">
+            <span>Secure account access</span>
+        </div>
+
+        <a class="log-home" href="index.html"><i class="bi bi-arrow-left" aria-hidden="true"></i> Back to home</a>
 
         <h2>Login</h2>
+        <p class="auth-intro">Sign in to manage your marketplace account.</p>
 
-        <input type="email" placeholder="Email Address">
-        <input type="password" placeholder="Password">
+        <label for="login-email">Email address</label>
+        <input id="login-email" type="email" placeholder="you@example.com" autocomplete="email" required>
+        <label for="login-password">Password</label>
+        <input id="login-password" type="password" placeholder="Enter your password" autocomplete="current-password" required>
 
-        <button type="submit">Login</button>
+        <button type="submit"><i class="bi bi-box-arrow-in-right" aria-hidden="true"></i> Sign in</button>
 
-        <p>
+        <p class="auth-switch">
             Don't have an account?
-            <a href="register.html">Register</a>
+            <a href="register.html">Create one</a>
         </p>
 
     </form>

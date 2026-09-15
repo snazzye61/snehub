@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="responsiveness.css">
     <link rel="icon" href="logo.png" type="image/png"> 
 </head>
-<body>
+<body class="auth-page">
 
     
 <header>
@@ -19,20 +19,30 @@
 <div class="form-container">
 
     <form class="auth-form">
-            <a class="home_btn" href="index.html">Home</a>
+        <div class="auth-brand">
+            <img src="logo.jpg" alt="SNE VAULT logo">
+            <span>Secure account access</span>
+        </div>
+
+        <a class="home_btn" href="index.html"><i class="bi bi-arrow-left" aria-hidden="true"></i> Back to home</a>
 
         <h2>Create Account</h2>
+        <p class="auth-intro">Create your account to browse and manage purchases.</p>
 
-        <input type="text" placeholder="Username" required>
-        <input type="email" placeholder="Email Address" required>
-        <input type="password" placeholder="Password" required>
-        <input type="password" placeholder="Enter your password again" required>
+        <label for="register-username">Username</label>
+        <input id="register-username" type="text" placeholder="Choose a username" autocomplete="username" required>
+        <label for="register-email">Email address</label>
+        <input id="register-email" type="email" placeholder="you@example.com" autocomplete="email" required>
+        <label for="register-password">Password</label>
+        <input id="register-password" type="password" placeholder="Create a password" autocomplete="new-password" required>
+        <label for="register-password-confirm">Confirm password</label>
+        <input id="register-password-confirm" type="password" placeholder="Enter your password again" autocomplete="new-password" required>
 
-        <button type="submit">Create Account</button>
+        <button type="submit"><i class="bi bi-person-plus" aria-hidden="true"></i> Create account</button>
 
-        <p>
+        <p class="auth-switch">
             Already have an account?
-            <a  href="login.html" class="login-auth">Login</a>
+            <a href="login.html" class="login-auth">Sign in</a>
         </p>
 
     </form>
