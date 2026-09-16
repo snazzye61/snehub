@@ -676,18 +676,23 @@ footer a {
     }
 
     .public-header {
-        padding: 16px 18px;
+        padding: 16px 20px;
+        gap: 24px;
     }
 
     .public-header nav {
         gap: 10px;
     }
 
+    .public-header .logo {
+        flex-shrink: 0;
+    }
+
     .public-header .header-actions {
         display: flex;
-        flex-wrap: wrap;
         gap: 8px;
         align-items: center;
+        flex-shrink: 0;
     }
 
     .hero {
@@ -1560,5 +1565,3 @@ button, .browse-button, .fund-button, .deposit-btn, .buy-account-button, .downlo
     .language-control { width: 100%; }
     .settings-grid { grid-template-columns: 1fr; gap: 14px; }
 }
-
-.lang-select { display: inline-flex; align-items: center; padding: 5px 8px; border: 1px solid var(--border-light); border-radius: 7px; background: var(--icon-circle-bg); color: var(--text-secondary); font-size: 11px; font-weight: 600; cursor: pointer; transition: background .2s ease, color .2s ease, border-color .2s ease; appearance: auto; -webkit-appearance: auto; flex-shrink: 0; height: 32px; }.lang-select:hover { background: var(--bg-overlay); color: var(--text-primary); border-color: var(--primary); }

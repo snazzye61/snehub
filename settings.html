@@ -17,8 +17,6 @@
             <a href="dashboard.html"><i class="bi bi-grid-1x2" aria-hidden="true"></i> Dashboard</a>
             <a href="contact.html"><i class="bi bi-headset" aria-hidden="true"></i> Support</a>
         </nav>
-        <select class="lang-select" id="lang-select" aria-label="Language"><option value="en">EN</option><option value="fr">FR</option></select>
-        <button class="header-theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode"><i class="bi bi-moon-stars" aria-hidden="true"></i><span class="theme-label">Dark</span></button>
     </header>
 
     <main class="settings-content">
@@ -27,86 +25,30 @@
         </div>
         <div class="settings-heading-row">
             <div>
-                <p class="eyebrow" data-i18n="eyebrow">ACCOUNT PREFERENCES</p>
-                <h1 data-i18n="settingsTitle">Settings</h1>
-                <p class="settings-intro" data-i18n="settingsIntro">Manage your account, security, notifications, and preferences.</p>
+                <p class="eyebrow">ACCOUNT PREFERENCES</p>
+                <h1>Settings</h1>
+                <p class="settings-intro">Manage your account security and preferences.</p>
             </div>
-            <label class="language-control" for="language-select"><i class="bi bi-translate" aria-hidden="true"></i><span data-i18n="language">Language</span><select id="language-select" aria-label="Language"><option value="en">English</option><option value="fr">Français</option></select></label>
         </div>
 
         <div class="settings-grid">
             <section class="settings-card">
-                <div class="settings-card-heading"><span class="settings-icon"><i class="bi bi-person" aria-hidden="true"></i></span><h2 data-i18n="account">Account</h2></div>
-                <a class="settings-row" href="#profile"><span><strong data-i18n="editProfile">Edit Profile</strong><small data-i18n="profileDetails">Update your account details</small></span><i class="bi bi-chevron-right" aria-hidden="true"></i></a>
-                <div class="settings-row settings-static"><span><strong data-i18n="email">Email</strong><small>elias@example.com</small></span><i class="bi bi-envelope" aria-hidden="true"></i></div>
-                <div class="settings-row settings-static"><span><strong data-i18n="phone">Phone Number</strong><small>+237 652 717 609</small></span><i class="bi bi-telephone" aria-hidden="true"></i></div>
-            </section>
-
-            <section class="settings-card">
-                <div class="settings-card-heading"><span class="settings-icon"><i class="bi bi-shield-lock" aria-hidden="true"></i></span><h2 data-i18n="security">Security</h2></div>
-                <a class="settings-row" href="#change-password"><span><strong data-i18n="changePassword">Change Password</strong><small data-i18n="changePasswordDetails">Keep your account protected</small></span><i class="bi bi-chevron-right" aria-hidden="true"></i></a>
-                <label class="settings-row settings-toggle"><span><strong data-i18n="twoFactor">Two-Factor Authentication</strong><small data-i18n="twoFactorDetails">Add another layer of account security</small></span><input type="checkbox" aria-label="Two-Factor Authentication"></label>
-            </section>
-
-            <section class="settings-card">
-                <div class="settings-card-heading"><span class="settings-icon"><i class="bi bi-bell" aria-hidden="true"></i></span><h2 data-i18n="notifications">Notifications</h2></div>
-                <label class="settings-row settings-toggle"><span><strong data-i18n="orderUpdates">Order Updates</strong><small data-i18n="orderUpdatesDetails">Status changes and delivery alerts</small></span><input type="checkbox" checked aria-label="Order Updates"></label>
-                <label class="settings-row settings-toggle"><span><strong data-i18n="ticketReplies">Ticket Replies</strong><small data-i18n="ticketRepliesDetails">Replies from the support team</small></span><input type="checkbox" checked aria-label="Ticket Replies"></label>
-                <label class="settings-row settings-toggle"><span><strong data-i18n="promotions">Promotions</strong><small data-i18n="promotionsDetails">New offers and marketplace updates</small></span><input type="checkbox" aria-label="Promotions"></label>
-            </section>
-
-            <section class="settings-card">
-                <div class="settings-card-heading"><span class="settings-icon"><i class="bi bi-moon-stars" aria-hidden="true"></i></span><h2 data-i18n="appearance">Appearance</h2></div>
-                <label class="settings-row settings-toggle"><span><strong data-i18n="darkMode">Dark Mode</strong><small data-i18n="darkModeDetails">Use the SNE VAULT dark interface</small></span><input type="checkbox" id="dark-mode-toggle" checked aria-label="Dark Mode"></label>
-            </section>
-
-            <section class="settings-card">
-                <div class="settings-card-heading"><span class="settings-icon"><i class="bi bi-translate" aria-hidden="true"></i></span><h2 data-i18n="language">Language</h2></div>
-                <label class="settings-language-option"><input type="radio" name="settings-language" value="en" checked><span>English</span><i class="bi bi-check2" aria-hidden="true"></i></label>
-                <label class="settings-language-option"><input type="radio" name="settings-language" value="fr"><span>Français</span><i class="bi bi-check2" aria-hidden="true"></i></label>
-            </section>
-
-            <section class="settings-card">
-                <div class="settings-card-heading"><span class="settings-icon"><i class="bi bi-life-preserver" aria-hidden="true"></i></span><h2 data-i18n="support">Support</h2></div>
-                <a class="settings-row" href="faq.html"><span><strong data-i18n="helpCenter">Help Center</strong><small data-i18n="helpCenterDetails">Find answers to common questions</small></span><i class="bi bi-chevron-right" aria-hidden="true"></i></a>
-                <a class="settings-row" href="contact.html"><span><strong data-i18n="contactSupport">Contact Support</strong><small data-i18n="contactSupportDetails">Talk to our support team</small></span><i class="bi bi-chevron-right" aria-hidden="true"></i></a>
-            </section>
-
-            <section class="settings-card">
-                <div class="settings-card-heading"><span class="settings-icon"><i class="bi bi-file-earmark-text" aria-hidden="true"></i></span><h2 data-i18n="legal">Legal</h2></div>
-                <a class="settings-row" href="privacy-policy.html"><span><strong data-i18n="privacyPolicy">Privacy Policy</strong></span><i class="bi bi-chevron-right" aria-hidden="true"></i></a>
-                <a class="settings-row" href="privacy-policy.html#terms"><span><strong data-i18n="terms">Terms &amp; Conditions</strong></span><i class="bi bi-chevron-right" aria-hidden="true"></i></a>
+                <div class="settings-card-heading"><span class="settings-icon"><i class="bi bi-shield-lock" aria-hidden="true"></i></span><h2>Security</h2></div>
+                <a class="settings-row" href="#change-password"><span><strong>Change Password</strong><small>Keep your account protected</small></span><i class="bi bi-chevron-right" aria-hidden="true"></i></a>
             </section>
 
             <section class="settings-card settings-danger-card">
-                <div class="settings-card-heading"><span class="settings-icon"><i class="bi bi-person-x" aria-hidden="true"></i></span><h2 data-i18n="accountManagement">Account Management</h2></div>
-                <button class="settings-danger-row" type="button"><i class="bi bi-trash3" aria-hidden="true"></i> <span data-i18n="deleteAccount">Delete Account</span></button>
+                <div class="settings-card-heading"><span class="settings-icon"><i class="bi bi-person-x" aria-hidden="true"></i></span><h2>Account Management</h2></div>
+                <button class="settings-danger-row" type="button"><i class="bi bi-trash3" aria-hidden="true"></i> <span>Delete Account</span></button>
+            </section>
+
+            <section class="settings-card settings-danger-card">
+                <div class="settings-card-heading"><span class="settings-icon"><i class="bi bi-box-arrow-left" aria-hidden="true"></i></span><h2>Session</h2></div>
+                <a class="settings-row" href="index.html"><span><strong>Log out</strong><small>Sign out of your account</small></span><i class="bi bi-box-arrow-right" aria-hidden="true"></i></a>
             </section>
         </div>
     </main>
 
-    <script>
-        // Dark mode toggle sync with theme system
-        const darkModeToggle = document.getElementById('dark-mode-toggle');
-        function applyTheme(theme) {
-            document.documentElement.setAttribute('data-theme', theme);
-            localStorage.setItem('sne-vault-theme', theme);
-            if (darkModeToggle) darkModeToggle.checked = theme === 'dark';
-            document.querySelectorAll('[data-theme-toggle]').forEach(function(btn) {
-                var icon = btn.querySelector('i');
-                if (icon) icon.className = theme === 'dark' ? 'bi bi-moon-stars' : 'bi bi-sun';
-                var label = btn.querySelector('.theme-label');
-                if (label) label.textContent = theme === 'dark' ? 'Dark' : 'Light';
-            });
-        }
-        var savedTheme = localStorage.getItem('sne-vault-theme');
-        applyTheme(savedTheme || 'dark');
-        if (darkModeToggle) {
-            darkModeToggle.addEventListener('change', function() {
-                applyTheme(this.checked ? 'dark' : 'light');
-            });
-        }
-    </script>
     <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -120,6 +62,5 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 <!--End of Tawk.to Script-->
-    <script src="i18n.js"></script>
 </body>
 </html>

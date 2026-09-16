@@ -10,15 +10,15 @@
     <link rel="icon" href="logo.png" type="image/png"> 
 </head>
 <body class="purchase-page">
-    <header class="legal-header"><a class="logo" href="index.html"><img src="logo.jpg" alt="SNE VAULT logo"><span>SNE <b>VAULT</b></span></a><select class="lang-select" id="lang-select" aria-label="Language"><option value="en">EN</option><option value="fr">FR</option></select><button class="header-theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode"><i class="bi bi-moon-stars" aria-hidden="true"></i><span class="theme-label">Dark</span></button></header>
+    <header class="legal-header"><a class="logo" href="index.html"><img src="logo.jpg" alt="SNE VAULT logo"><span>SNE <b>VAULT</b></span></a></header>
     <main class="purchase-container">
         <div class="page-navigation"><a class="legal-back-link" href="category.html" onclick="if (history.length > 1) { history.back(); return false; }">&larr; Previous page</a><a class="dashboard-home-link" href="dashboard.html"><i class="bi bi-grid-1x2" aria-hidden="true"></i> Dashboard</a></div>
-        <div class="purchase-heading"><p class="eyebrow" data-i18n="purchase-eyebrow">CHECKOUT</p><h1 data-i18n="purchase-heading">Complete your purchase</h1><p data-i18n="purchase-intro">Choose how many accounts you need and review the total before confirming.</p></div>
+        <div class="purchase-heading"><p class="eyebrow">CHECKOUT</p><h1>Complete your purchase</h1><p>Choose how many accounts you need and review the total before confirming.</p></div>
         <form class="purchase-form" id="purchase-form">
             <section class="purchase-card selected-account-card"><p class="eyebrow">SELECTED ACCOUNT</p><div class="selected-account"><span class="purchase-platform-icon" id="platform-icon">FB</span><div><h2 id="product-name">Facebook Aged 2020</h2><p>Unit price: <strong>$<span id="unit-price">18.00</span></strong></p></div></div></section>
             <section class="purchase-card"><label class="quantity-label" for="quantity">How many accounts do you need?</label><div class="quantity-control"><button type="button" id="decrease-quantity" aria-label="Decrease quantity">-</button><input id="quantity" type="number" min="1" max="20" value="1" required><button type="button" id="increase-quantity" aria-label="Increase quantity">+</button></div><p class="quantity-note">You can purchase up to 20 accounts in one order.</p></section>
             <section class="purchase-summary"><div><span>Unit price</span><strong>$<span id="summary-unit-price">18.00</span></strong></div><div><span>Quantity</span><strong>x<span id="summary-quantity">1</span></strong></div><div class="purchase-total"><span>Total</span><strong>$<span id="total-price">18.00</span></strong></div></section>
-            <button class="purchase-button" type="submit" data-i18n="purchase-confirm-btn"><i class="bi bi-lock-fill" aria-hidden="true"></i> Confirm purchase</button>
+            <button class="purchase-button" type="submit"><i class="bi bi-lock-fill" aria-hidden="true"></i> Confirm purchase</button>
             <p class="purchase-confirmation" id="purchase-confirmation" hidden>Purchase request received. Your order will appear after payment confirmation.</p>
         </form>
         <div class="purchase-help"><i class="bi bi-shield-check" aria-hidden="true"></i><span>Review the account details carefully before confirming. Need help? <a href="contact.html">Contact support</a>.</span></div>
@@ -51,7 +51,7 @@
         quantityInput.addEventListener('input', updateTotal);
         document.getElementById('purchase-form').addEventListener('submit', (event) => { event.preventDefault(); confirmation.hidden = false; confirmation.textContent = `Purchase request received for ${quantityInput.value} ${productName} account(s), total $${(unitPrice * Number(quantityInput.value)).toFixed(2)}. Continue to payment to complete your order.`; });
     </script>
-<script src="i18n.js"></script>
+
      <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
