@@ -162,10 +162,15 @@
             categoryPickerMenu.hidden = false;
             categoryPickerToggle.setAttribute('aria-expanded', 'true');
             categoryPicker.classList.add('is-open');
-            inlineSubmenu.querySelector('.category-subcategory-close').addEventListener('click', () => {
+            inlineSubmenu.querySelector('.category-subcategory-close').addEventListener('click', (event) => {
+                event.stopPropagation();
                 inlineSubmenu.remove();
                 selectedOption.classList.remove('is-selected');
-                categoryPickerLabel.textContent = 'Select a category';
+                categoryPickerLabel.textContent = 'Select a platform';
+                categoryPickerMenu.hidden = false;
+                categoryPickerToggle.setAttribute('aria-expanded', 'true');
+                categoryPicker.classList.add('is-open');
+                selectedOption.focus();
             });
             inlineSubmenu.querySelector('.category-show-all').addEventListener('click', () => {
                 showPlatform(platformId);
