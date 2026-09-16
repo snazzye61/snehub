@@ -14,8 +14,28 @@
     <header class="catalog-header"><a class="logo" href="index.html"><img src="logo.jpg" alt="SNE VAULT logo"><span>SNE <b>VAULT</b></span></a><nav id="catalog-nav"><a href="index.html">Home</a><a href="dashboard.html">Dashboard</a><a href="contact.html">Support</a></nav></header>
     <main class="catalog-container">
         <div class="page-navigation"><a class="catalog-back-link" href="dashboard.html" onclick="if (history.length > 1) { history.back(); return false; }">&larr; Previous page</a><a class="dashboard-home-link" href="dashboard.html"><i class="bi bi-grid-1x2" aria-hidden="true"></i> Dashboard</a></div>
-        <div class="catalog-heading"><div><p class="eyebrow">ACCOUNT MARKETPLACE</p><h1>Browse accounts</h1><p>Choose a platform, select a category, and compare available accounts.</p></div><span class="secure-note"><i class="bi bi-shield-check" aria-hidden="true"></i> Verified listings</span></div>
-        <nav class="platform-tabs" aria-label="Account platforms"><a class="platform-tab active" href="#facebook"><i class="bi bi-facebook" aria-hidden="true"></i> Facebook</a><a class="platform-tab" href="#instagram"><i class="bi bi-instagram" aria-hidden="true"></i> Instagram</a><a class="platform-tab" href="#tiktok"><i class="bi bi-tiktok" aria-hidden="true"></i> TikTok</a><a class="platform-tab" href="#gmail"><i class="bi bi-envelope-at" aria-hidden="true"></i> Gmail</a><a class="platform-tab" href="#google-voice"><i class="bi bi-telephone" aria-hidden="true"></i> Google Voice</a><a class="platform-tab" href="#discord"><i class="bi bi-discord" aria-hidden="true"></i> Discord</a><a class="platform-tab" href="#vpn"><i class="bi bi-shield-lock" aria-hidden="true"></i> VPN</a><a class="platform-tab" href="#gaming"><i class="bi bi-controller" aria-hidden="true"></i> Gaming</a></nav>
+        <div class="catalog-heading"><div><p class="eyebrow">ACCOUNT MARKETPLACE</p><h1>Browse accounts</h1><p>Choose a platform, select a category, and compare available accounts.</p></div></div>
+        <div class="category-picker" id="category-picker">
+            <button class="category-picker-toggle" id="category-picker-toggle" type="button" aria-expanded="false" aria-controls="category-picker-menu">
+                <i class="bi bi-list" aria-hidden="true"></i><span id="category-picker-label">Select a category</span><i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="category-picker-menu" id="category-picker-menu" hidden>
+                <div class="category-picker-columns">
+                    <div class="category-platform-list" role="listbox" aria-label="Account platforms">
+                        <p class="category-menu-label">Platforms</p>
+                        <button type="button" class="category-platform-option" data-platform="facebook"><i class="bi bi-facebook" aria-hidden="true"></i><span>Facebook</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+                        <button type="button" class="category-platform-option" data-platform="instagram"><i class="bi bi-instagram" aria-hidden="true"></i><span>Instagram</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+                        <button type="button" class="category-platform-option" data-platform="tiktok"><i class="bi bi-tiktok" aria-hidden="true"></i><span>TikTok</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+                        <button type="button" class="category-platform-option" data-platform="gmail"><i class="bi bi-envelope-at" aria-hidden="true"></i><span>Email / Gmail</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+                        <button type="button" class="category-platform-option" data-platform="x"><i class="bi bi-twitter-x" aria-hidden="true"></i><span>X / Twitter</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+                        <button type="button" class="category-platform-option" data-platform="discord"><i class="bi bi-discord" aria-hidden="true"></i><span>Discord</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+                        <button type="button" class="category-platform-option" data-platform="google-voice"><i class="bi bi-telephone" aria-hidden="true"></i><span>Google Voice</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+                        <button type="button" class="category-platform-option" data-platform="vpn"><i class="bi bi-shield-lock" aria-hidden="true"></i><span>VPN</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+                        <button type="button" class="category-platform-option" data-platform="gaming"><i class="bi bi-controller" aria-hidden="true"></i><span>Gaming</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <section class="catalog-platform" id="facebook">
             <div class="platform-heading"><div><p class="eyebrow">FACEBOOK ACCOUNTS</p><h2>Choose a Facebook category</h2></div><span>48 accounts available</span></div>
@@ -36,36 +56,144 @@
         <section class="catalog-platform compact-platform" id="google-voice"><div class="platform-heading"><div><p class="eyebrow">GOOGLE VOICE</p><h2>Google Voice numbers</h2></div><span>20+ numbers available</span></div><div class="listing-section" id="google-voice-numbers"><div class="listing-heading"><h3>Google Voice numbers</h3><span>20 numbers available</span></div><div class="listing-grid"><article class="account-listing"><div class="listing-top"><span class="listing-icon google-voice-listing-icon">GV</span><span class="listing-status">Available</span></div><h4>Google Voice US Number</h4><p>Ready-to-use US number with transfer instructions included after purchase.</p><div class="listing-specs"><span><b>US</b> Number</span><span><b>SMS</b> Ready</span><span><b>Guide</b> Included</span></div><div class="listing-bottom"><strong>$10.00</strong><span class="listing-actions"><a class="buy-account-button" href="purchase.html?product=Google%20Voice%20US%20Number&price=10.00">Buy now</a><a href="contact.html">View details <i class="bi bi-arrow-right" aria-hidden="true"></i></a></span></div></article></div></div></section>
         <section class="catalog-platform compact-platform" id="discord"><div class="platform-heading"><div><p class="eyebrow">DISCORD ACCOUNTS</p><h2>Choose a Discord category</h2></div><span>35+ accounts available</span></div><nav class="subcategory-tabs"><a href="#discord-aged">Aged</a><a href="#discord-nitro">Nitro history</a><a href="#discord-servers">Server ready</a></nav><div class="listing-section" id="discord-aged"><div class="listing-heading"><h3>Discord aged accounts</h3><span>35 accounts available</span></div></div><div class="listing-section" id="discord-nitro"><div class="listing-heading"><h3>Discord accounts with Nitro history</h3><span>12 accounts available</span></div></div><div class="listing-section" id="discord-servers"><div class="listing-heading"><h3>Server-ready accounts</h3><span>8 accounts available</span></div></div></section>
         <section class="catalog-platform compact-platform" id="vpn"><div class="platform-heading"><div><p class="eyebrow">VPN SERVICES</p><h2>Choose a VPN category</h2></div><span>45+ services available</span></div><nav class="subcategory-tabs"><a href="#vpn-residential">Residential</a><a href="#vpn-mobile">Mobile</a><a href="#vpn-premium">Premium</a></nav><div class="listing-section" id="vpn-residential"><div class="listing-heading"><h3>Residential VPN access</h3><span>18 services available</span></div><div class="listing-grid"><article class="account-listing"><div class="listing-top"><span class="listing-icon vpn-listing-icon">VPN</span><span class="listing-status">Available</span></div><h4>Residential VPN Access</h4><p>Private residential connection with setup details and usage terms included.</p><div class="listing-specs"><span><b>30</b> Days</span><span><b>Residential</b> IP</span><span><b>Guide</b> Included</span></div><div class="listing-bottom"><strong>$12.00</strong><span class="listing-actions"><a class="buy-account-button" href="purchase.html?product=Residential%20VPN%20Access&price=12.00">Buy now</a><a href="contact.html">View details <i class="bi bi-arrow-right" aria-hidden="true"></i></a></span></div></article></div></div><div class="listing-section" id="vpn-mobile"><div class="listing-heading"><h3>Mobile VPN access</h3><span>15 services available</span></div><div class="listing-grid"><article class="account-listing"><div class="listing-top"><span class="listing-icon vpn-listing-icon">VPN</span><span class="listing-status">Available</span></div><h4>Mobile VPN Access</h4><p>Mobile connection access with setup details and usage terms included.</p><div class="listing-specs"><span><b>30</b> Days</span><span><b>Mobile</b> IP</span><span><b>Guide</b> Included</span></div><div class="listing-bottom"><strong>$15.00</strong><span class="listing-actions"><a class="buy-account-button" href="purchase.html?product=Mobile%20VPN%20Access&price=15.00">Buy now</a><a href="contact.html">View details <i class="bi bi-arrow-right" aria-hidden="true"></i></a></span></div></article></div></div><div class="listing-section" id="vpn-premium"><div class="listing-heading"><h3>Premium VPN access</h3><span>12 services available</span></div><div class="listing-grid"><article class="account-listing"><div class="listing-top"><span class="listing-icon vpn-listing-icon">VPN</span><span class="listing-status">Available</span></div><h4>Premium VPN Access</h4><p>Premium VPN access with setup details and usage terms included.</p><div class="listing-specs"><span><b>90</b> Days</span><span><b>Premium</b> Plan</span><span><b>Guide</b> Included</span></div><div class="listing-bottom"><strong>$25.00</strong><span class="listing-actions"><a class="buy-account-button" href="purchase.html?product=Premium%20VPN%20Access&price=25.00">Buy now</a><a href="contact.html">View details <i class="bi bi-arrow-right" aria-hidden="true"></i></a></span></div></article></div></div></section>
+        <section class="catalog-platform compact-platform" id="x"><div class="platform-heading"><div><p class="eyebrow">X / TWITTER ACCOUNTS</p><h2>Choose an X category</h2></div><span>40+ accounts available</span></div><nav class="subcategory-tabs"><a href="#x-new">New accounts</a><a href="#x-aged">Aged accounts</a><a href="#x-business">Business accounts</a><a href="#x-advertising">For advertising</a></nav><div class="listing-section" id="x-new"><div class="listing-heading"><h3>New X accounts</h3><span>12 accounts available</span></div><div class="listing-grid"><article class="account-listing"><div class="listing-top"><span class="listing-icon x-listing-icon">X</span><span class="listing-status">Available</span></div><h4>X Starter Account</h4><p>Ready-to-use X account with email access and setup guidance included.</p><div class="listing-specs"><span><b>Email</b> Included</span><span><b>Setup</b> Guide</span><span><b>Fresh</b> Profile</span></div><div class="listing-bottom"><strong>$8.00</strong><span class="listing-actions"><a class="buy-account-button" href="purchase.html?product=X%20Starter%20Account&price=8.00">Buy now</a><a href="contact.html">View details <i class="bi bi-arrow-right" aria-hidden="true"></i></a></span></div></article></div></div><div class="listing-section" id="x-aged"><div class="listing-heading"><h3>Aged X accounts</h3><span>14 accounts available</span></div></div><div class="listing-section" id="x-business"><div class="listing-heading"><h3>X business accounts</h3><span>8 accounts available</span></div></div><div class="listing-section" id="x-advertising"><div class="listing-heading"><h3>X accounts for advertising</h3><span>6 accounts available</span></div></div></section>
         <section class="catalog-platform compact-platform" id="gaming"><div class="platform-heading"><div><p class="eyebrow">GAMING ACCOUNTS</p><h2>Choose a game category</h2></div><span>70+ accounts available</span></div><nav class="subcategory-tabs"><a href="#codm">Call of Duty Mobile</a><a href="#freefire">Free Fire</a></nav><div class="listing-section" id="codm"><div class="listing-heading"><h3>Call of Duty Mobile accounts</h3><span>40 accounts available</span></div></div><div class="listing-section" id="freefire"><div class="listing-heading"><h3>Free Fire accounts</h3><span>30 accounts available</span></div></div></section>
         <div class="catalog-help"><strong>Need help choosing?</strong><p>Contact support for help understanding account details before you purchase.</p><a href="contact.html">Contact support</a></div>
     </main>
     <script>
         const catalogPage = document.querySelector('.catalog-page');
-        const platformTabs = document.querySelectorAll('.platform-tab');
         const platformSections = document.querySelectorAll('.catalog-platform');
+        const categoryPicker = document.getElementById('category-picker');
+        const categoryPickerToggle = document.getElementById('category-picker-toggle');
+        const categoryPickerMenu = document.getElementById('category-picker-menu');
+        const categoryPickerLabel = document.getElementById('category-picker-label');
+        const platformOptions = document.querySelectorAll('.category-platform-option');
+        const categoryDefinitions = {
+            facebook: { label: 'Facebook', icon: 'bi-facebook', categories: [['New accounts', 'facebook-softwreck'], ['Aged', 'facebook-aged'], ['With friends and age', 'facebook-marketplace'], ['For advertising', 'facebook-ads']] },
+            instagram: { label: 'Instagram', icon: 'bi-instagram', categories: [['New accounts', 'instagram-aged'], ['Aged', 'instagram-aged'], ['With followers', 'instagram-followers'], ['For advertising', 'instagram-followers']] },
+            tiktok: { label: 'TikTok', icon: 'bi-tiktok', categories: [['New accounts', 'tiktok-aged'], ['Organic creator', 'tiktok-organic'], ['With followers', 'tiktok-followers'], ['For advertising', 'tiktok-followers']] },
+            gmail: { label: 'Email / Gmail', icon: 'bi-envelope-at', categories: [['New accounts', 'gmail-aged'], ['Aged', 'gmail-aged'], ['Phone verified', 'gmail-verified'], ['Recovery email set', 'gmail-recovery']] },
+            x: { label: 'X / Twitter', icon: 'bi-twitter-x', categories: [['New accounts', 'x-new'], ['Aged accounts', 'x-aged'], ['Business accounts', 'x-business'], ['For advertising', 'x-advertising']] },
+            discord: { label: 'Discord', icon: 'bi-discord', categories: [['New accounts', 'discord-aged'], ['Aged', 'discord-aged'], ['Nitro history', 'discord-nitro'], ['Server ready', 'discord-servers']] },
+            'google-voice': { label: 'Google Voice', icon: 'bi-telephone', categories: [['US numbers', 'google-voice-numbers'], ['SMS ready', 'google-voice-numbers']] },
+            vpn: { label: 'VPN', icon: 'bi-shield-lock', categories: [['Residential', 'vpn-residential'], ['Mobile', 'vpn-mobile'], ['Premium', 'vpn-premium']] },
+            gaming: { label: 'Gaming', icon: 'bi-controller', categories: [['Call of Duty Mobile', 'codm'], ['Free Fire', 'freefire']] }
+        };
 
         catalogPage.classList.add('catalog-interactive');
+        document.querySelectorAll('.catalog-platform > .subcategory-tabs').forEach((tabs) => tabs.remove());
 
-        function showPlatform(platformId, updateUrl = true) {
+        function prepareListingPreviews() {
+            document.querySelectorAll('.listing-section').forEach((section) => {
+                const grid = section.querySelector('.listing-grid');
+                if (!grid || section.querySelector('.view-all-listings')) return;
+                const listings = [...grid.querySelectorAll('.account-listing')];
+                listings.forEach((listing, index) => listing.classList.toggle('listing-preview-hidden', index >= 10));
+                const viewAll = document.createElement('button');
+                viewAll.type = 'button';
+                viewAll.className = 'view-all-listings';
+                viewAll.innerHTML = 'View all <i class="bi bi-arrow-down" aria-hidden="true"></i>';
+                viewAll.hidden = false;
+                viewAll.addEventListener('click', () => {
+                    const expanded = viewAll.classList.toggle('is-expanded');
+                    listings.forEach((listing, index) => listing.classList.toggle('listing-preview-hidden', !expanded && index >= 10));
+                    viewAll.innerHTML = expanded ? 'Show less <i class="bi bi-arrow-up" aria-hidden="true"></i>' : 'View all <i class="bi bi-arrow-down" aria-hidden="true"></i>';
+                });
+                section.appendChild(viewAll);
+            });
+        }
+
+        prepareListingPreviews();
+
+        function showPlatform(platformId, updateUrl = true, listingId = null) {
             platformSections.forEach((section) => {
-                section.hidden = section.id !== platformId;
+                section.hidden = !platformId || section.id !== platformId;
+                section.classList.toggle('is-focused', Boolean(platformId && section.id === platformId && listingId));
             });
-            platformTabs.forEach((tab) => {
-                const isActive = tab.getAttribute('href') === `#${platformId}`;
-                tab.classList.toggle('active', isActive);
-                tab.setAttribute('aria-expanded', isActive ? 'true' : 'false');
-            });
+            const section = document.getElementById(platformId);
+            if (section) {
+                section.querySelectorAll('.listing-section').forEach((listing) => {
+                    listing.hidden = listingId ? listing.id !== listingId : false;
+                });
+            }
             if (updateUrl) {
-                history.replaceState(null, '', `#${platformId}`);
+                history.replaceState(null, '', listingId ? `#${listingId}` : `#${platformId}`);
             }
         }
 
-        platformTabs.forEach((tab) => {
-            tab.setAttribute('aria-expanded', tab.classList.contains('active') ? 'true' : 'false');
-            tab.addEventListener('click', (event) => {
-                event.preventDefault();
-                showPlatform(tab.getAttribute('href').slice(1));
+        function showCatalogOverview() {
+            platformSections.forEach((section) => {
+                section.hidden = false;
+                section.classList.remove('is-focused');
+                const definition = categoryDefinitions[section.id];
+                const firstCategory = definition?.categories[0];
+                const firstListing = firstCategory ? document.getElementById(firstCategory[1]) : section.querySelector('.listing-section');
+                section.querySelectorAll('.listing-section').forEach((listing) => {
+                    listing.hidden = listing !== firstListing;
+                });
+                if (definition && firstCategory) {
+                    const heading = section.querySelector('.platform-heading h2');
+                    if (heading) heading.textContent = `${definition.label} Accounts / ${firstCategory[0]}`;
+                }
             });
+        }
+
+        function openCategoryMenu() {
+            const isOpen = !categoryPickerMenu.hidden;
+            categoryPickerMenu.hidden = isOpen;
+            categoryPickerToggle.setAttribute('aria-expanded', String(!isOpen));
+            categoryPicker.classList.toggle('is-open', !isOpen);
+        }
+
+        function renderSubcategories(platformId) {
+            const definition = categoryDefinitions[platformId];
+            if (!definition) return;
+            document.querySelector('.category-inline-submenu')?.remove();
+            document.querySelectorAll('.category-platform-option.is-selected').forEach((option) => option.classList.remove('is-selected'));
+            const selectedOption = document.querySelector(`[data-platform="${platformId}"]`);
+            if (!selectedOption) return;
+            categoryPickerLabel.textContent = definition.label;
+            selectedOption.classList.add('is-selected');
+            const inlineSubmenu = document.createElement('div');
+            inlineSubmenu.className = 'category-inline-submenu';
+            inlineSubmenu.setAttribute('aria-live', 'polite');
+            inlineSubmenu.innerHTML = `<div class="category-subcategory-heading"><span><i class="bi ${definition.icon}" aria-hidden="true"></i> ${definition.label}</span><span class="category-subcategory-actions"><button type="button" class="category-show-all">Show all <i class="bi bi-arrow-right" aria-hidden="true"></i></button><button type="button" class="category-subcategory-close" aria-label="Close ${definition.label} categories"><i class="bi bi-x-lg" aria-hidden="true"></i></button></span></div><p class="category-menu-label">Choose a category</p>${definition.categories.map(([label, id]) => `<button type="button" class="category-subcategory-option" data-listing="${id}"><span>${label}</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>`).join('')}`;
+            selectedOption.insertAdjacentElement('afterend', inlineSubmenu);
+            categoryPickerMenu.hidden = false;
+            categoryPickerToggle.setAttribute('aria-expanded', 'true');
+            categoryPicker.classList.add('is-open');
+            inlineSubmenu.querySelector('.category-subcategory-close').addEventListener('click', () => {
+                inlineSubmenu.remove();
+                selectedOption.classList.remove('is-selected');
+                categoryPickerLabel.textContent = 'Select a category';
+            });
+            inlineSubmenu.querySelector('.category-show-all').addEventListener('click', () => {
+                showPlatform(platformId);
+                categoryPickerMenu.hidden = true;
+                categoryPickerToggle.setAttribute('aria-expanded', 'false');
+                categoryPicker.classList.remove('is-open');
+                document.getElementById(platformId).scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+            inlineSubmenu.querySelectorAll('.category-subcategory-option').forEach((option) => {
+                option.addEventListener('click', () => {
+                    const listingId = option.dataset.listing;
+                    showPlatform(platformId, true, listingId);
+                    categoryPickerMenu.hidden = true;
+                    categoryPickerToggle.setAttribute('aria-expanded', 'false');
+                    categoryPicker.classList.remove('is-open');
+                    document.getElementById(listingId)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                });
+            });
+        }
+
+        categoryPickerToggle.addEventListener('click', openCategoryMenu);
+        platformOptions.forEach((option) => option.addEventListener('click', () => renderSubcategories(option.dataset.platform)));
+        document.addEventListener('click', (event) => {
+            if (!categoryPicker.contains(event.target)) {
+                categoryPickerMenu.hidden = true;
+                categoryPickerToggle.setAttribute('aria-expanded', 'false');
+                categoryPicker.classList.remove('is-open');
+            }
         });
 
         function resolvePlatformId(targetId) {
@@ -83,11 +211,19 @@
                 'vpn-premium': 'vpn'
             };
 
-            return aliases[targetId] || 'facebook';
+            return aliases[targetId] || (categoryDefinitions[targetId] ? targetId : null);
         }
 
         const hashTarget = window.location.hash.slice(1);
-        showPlatform(resolvePlatformId(hashTarget), false);
+        if (hashTarget) {
+            const initialPlatform = resolvePlatformId(hashTarget);
+            const initialListing = document.getElementById(hashTarget)?.classList.contains('listing-section')
+                ? hashTarget
+                : categoryDefinitions[initialPlatform]?.categories[0][1];
+            showPlatform(initialPlatform, false, initialListing);
+        } else {
+            showCatalogOverview();
+        }
 
         document.querySelectorAll('.buy-account-button').forEach((button) => {
             button.addEventListener('click', (event) => {

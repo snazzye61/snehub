@@ -485,6 +485,20 @@ button, .browse-button, .fund-button, .deposit-btn, .buy-account-button, .downlo
   .wallet-container {
     max-width: calc(100% - 32px);
   }
+
+  .category-picker {
+    width: 100%;
+  }
+
+  .category-picker-menu {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .category-picker-toggle {
+    min-height: 48px;
+  }
 }
 
 @media (max-width: 900px) and (orientation: landscape) {
