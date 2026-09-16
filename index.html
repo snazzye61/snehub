@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>(function(){var t=localStorage.getItem('sne-vault-theme');document.documentElement.setAttribute('data-theme',t||'dark')})();</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Account Market</title>
@@ -14,30 +15,32 @@
 <header class="public-header">
     <a class="logo" href="index.html"><img src="logo.jpg" alt="SNE VAULT logo"><span>SNE <b>VAULT</b></span></a>
     <div class="header-actions">
-        <a href="register.html" class="btn-register">Register</a>
+        <select class="lang-select" id="lang-select" aria-label="Language"><option value="en">EN</option><option value="fr">FR</option></select>
+        <button class="header-theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode"><i class="bi bi-moon-stars" aria-hidden="true"></i><span class="theme-label">Dark</span></button>
+        <a href="register.html" class="btn-register" data-i18n="nav-register">Register</a>
         <button class="mobile-menu-toggle public-menu-toggle" type="button" data-menu="public-nav" aria-expanded="false" aria-controls="public-nav"><i class="bi bi-list" aria-hidden="true"></i><i class="bi bi-x-lg" aria-hidden="true"></i><span>Menu</span></button>
     </div>
 
     <nav id="public-nav">
-        <a href="index.html">Home</a>
-        <a href="category.html">Categories</a>
-        <a href="faq.html">FAQ</a>
-        <a href="contact.html">Contact</a>
-        <a href="about.html">About us</a>
-        <a href="login.html" class="btn-login">Login</a>
+        <a href="index.html" data-i18n="nav-home">Home</a>
+        <a href="category.html" data-i18n="nav-categories">Categories</a>
+        <a href="faq.html" data-i18n="nav-faq">FAQ</a>
+        <a href="contact.html" data-i18n="nav-contact">Contact</a>
+        <a href="about.html" data-i18n="nav-about">About us</a>
+        <a href="login.html" class="btn-login" data-i18n="nav-login">Login</a>
     </nav>
 </header>
 
 <main class="landing-page">
     <section class="hero">
         <div class="hero-copy">
-            <span class="eyebrow">Secure marketplace</span>
-            <h1>Find trusted accounts for your next big move.</h1>
-            <p>Buy verified social media, Gmail, and VPN accounts from a marketplace built for speed, security, and peace of mind.</p>
+            <span class="eyebrow" data-i18n="idx-eyebrow">Secure marketplace</span>
+            <h1 data-i18n="idx-heading">Find trusted accounts for your next big move.</h1>
+            <p data-i18n="idx-intro">Buy verified social media, Gmail, and VPN accounts from a marketplace built for speed, security, and peace of mind.</p>
 
             <div class="hero-actions">
-                <a href="category.html" class="primary-button">Browse accounts</a>
-                <a href="contact.html" class="secondary-button">Talk to support</a>
+                <a href="category.html" class="primary-button" data-i18n="idx-cta-primary">Browse accounts</a>
+                <a href="contact.html" class="secondary-button" data-i18n="idx-cta-secondary">Talk to support</a>
             </div>
 
             <div class="hero-badges">
@@ -135,10 +138,6 @@
 </footer>
 
 <script src="mobile-menu.js"></script>
-
-    <a class="whatsapp-float" href="https://wa.me/237652717609?text=Hello%20SNE%20VAULT%20support%2C%20I%20would%20like%20help%20finding%20an%20account." target="_blank" rel="noopener" aria-label="Contact WhatsApp support">
-        <span class="whatsapp-icon"><i class="bi bi-whatsapp" aria-hidden="true"></i></span>
-        <span class="whatsapp-label">Need help? Chat with us</span>
-    </a>
+<script src="i18n.js"></script>
 </body>
 </html>

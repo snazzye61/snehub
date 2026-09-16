@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>(function(){var t=localStorage.getItem('sne-vault-theme');document.documentElement.setAttribute('data-theme',t||'dark')})();</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ | SNE VAULT</title>
@@ -11,12 +12,14 @@
 <body class="legal-page faq-page">
      <header class="legal-header">
         <a class="logo" href="index.html"><img src="logo.jpg" alt="SNE VAULT logo"><span>SNE <b>VAULT</b></span></a>
+        <select class="lang-select" id="lang-select" aria-label="Language"><option value="en">EN</option><option value="fr">FR</option></select>
+        <button class="header-theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode"><i class="bi bi-moon-stars" aria-hidden="true"></i><span class="theme-label">Dark</span></button>
     </header>
     <main class="legal-content faq-content">
         <div class="page-navigation"><a class="legal-back-link" href="dashboard.html" onclick="if (history.length > 1) { history.back(); return false; }">&larr; Previous page</a><a class="dashboard-home-link" href="dashboard.html"><i class="bi bi-grid-1x2" aria-hidden="true"></i> Dashboard</a></div>
-        <p class="eyebrow">SNE VAULT HELP CENTER</p>
-        <h1>Frequently asked questions</h1>
-        <p class="legal-updated">Helpful answers about buying, payments, downloads, and account access.</p>
+        <p class="eyebrow" data-i18n="faq-eyebrow">SNE VAULT HELP CENTER</p>
+        <h1 data-i18n="faq-heading">Frequently asked questions</h1>
+        <p class="legal-updated" data-i18n="faq-intro">Helpful answers about buying, payments, downloads, and account access.</p>
 
         <section class="faq-list">
             <details open><summary>What is SNE VAULT?</summary><p>SNE VAULT is a digital marketplace designed to make browsing, purchasing, and managing social media accounts simple and organized.</p></details>
@@ -31,11 +34,21 @@
             <details><summary>Is my information secure?</summary><p>We use reasonable safeguards to protect account and order information. For more details about data collection, storage, and your rights, read our Privacy Policy.</p></details>
         </section>
 
-        <section class="faq-footer"><strong>Still need help?</strong><p>Our support team can help with an order, payment, or account-access problem.</p><a class="browse-button" href="contact.html">Contact support</a></section>
+        <section class="faq-footer"><strong data-i18n="faq-footer-heading">Still need help?</strong><p data-i18n="faq-footer-desc">Our support team can help with an order, payment, or account-access problem.</p><a class="browse-button" href="contact.html" data-i18n="faq-footer-cta">Contact support</a></section>
     </main>
-    <a class="whatsapp-float" href="https://wa.me/237652717609?text=Hello%20SNE%20VAULT%20support%2C%20I%20have%20a%20question%20about%20my%20account." target="_blank" rel="noopener" aria-label="Contact WhatsApp support">
-        <span class="whatsapp-icon"><i class="bi bi-whatsapp" aria-hidden="true"></i></span>
-        <span class="whatsapp-label">Need help? Chat with us</span>
-    </a>
+<script src="i18n.js"></script>
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6aa9c08bd07e5e34429203c2/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
 </body>
 </html>

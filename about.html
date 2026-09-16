@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>(function(){var t=localStorage.getItem('sne-vault-theme');document.documentElement.setAttribute('data-theme',t||'dark')})();</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | SNE VAULT</title>
@@ -12,13 +13,15 @@
 <body class="legal-page">
     <header class="legal-header">
         <a class="logo" href="index.html"><img src="logo.jpg" alt="SNE VAULT logo"><span>SNE <b>VAULT</b></span></a>
+        <select class="lang-select" id="lang-select" aria-label="Language"><option value="en">EN</option><option value="fr">FR</option></select>
+        <button class="header-theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode"><i class="bi bi-moon-stars" aria-hidden="true"></i><span class="theme-label">Dark</span></button>
     </header>
 
     <main class="legal-content about-content">
         <div class="page-navigation"><a class="legal-back-link" href="dashboard.html" onclick="if (history.length > 1) { history.back(); return false; }">&larr; Previous page</a><a class="dashboard-home-link" href="dashboard.html"><i class="bi bi-grid-1x2" aria-hidden="true"></i> Dashboard</a></div>
-        <p class="eyebrow">ABOUT SNE VAULT</p>
-        <h1>Making account access simpler.</h1>
-        <p class="legal-updated">A marketplace built to make purchasing social media accounts easier for everyone.</p>
+        <p class="eyebrow" data-i18n="about-eyebrow">ABOUT SNE VAULT</p>
+        <h1 data-i18n="about-heading">Making account access simpler.</h1>
+        <p class="legal-updated" data-i18n="about-intro">A marketplace built to make purchasing social media accounts easier for everyone.</p>
 
         <section class="about-hero-copy">
             <p>SNE VAULT is a digital marketplace created to give people a simpler way to discover, purchase, and manage social media accounts from one organized platform.</p>
@@ -32,20 +35,30 @@
         </section>
 
         <section class="about-values">
-            <article><span class="about-value-number">01</span><h2>Simple by design</h2><p>We keep browsing, buying, and account access clear so customers can focus on what they need.</p></article>
-            <article><span class="about-value-number">02</span><h2>Customer support</h2><p>Questions do not stop after checkout. Our support channels are available for order and login concerns.</p></article>
-            <article><span class="about-value-number">03</span><h2>Always improving</h2><p>We listen to feedback and continue improving the platform, its tools, and the customer experience.</p></article>
+            <article><span class="about-value-number">01</span><h2 data-i18n="about-value1-heading">Simple by design</h2><p data-i18n="about-value1-desc">We keep browsing, buying, and account access clear so customers can focus on what they need.</p></article>
+            <article><span class="about-value-number">02</span><h2 data-i18n="about-value2-heading">Customer support</h2><p data-i18n="about-value2-desc">Questions do not stop after checkout. Our support channels are available for order and login concerns.</p></article>
+            <article><span class="about-value-number">03</span><h2 data-i18n="about-value3-heading">Always improving</h2><p data-i18n="about-value3-desc">We listen to feedback and continue improving the platform, its tools, and the customer experience.</p></article>
         </section>
 
         <section class="legal-section legal-contact">
-            <h2>Our vision</h2>
-            <p>We want SNE VAULT to become a trusted, easy-to-use destination for digital account purchases, with helpful guidance and dependable support at every step.</p>
-            <a class="browse-button about-button" href="category.html">Explore accounts</a>
+            <h2 data-i18n="about-vision-heading">Our vision</h2>
+            <p data-i18n="about-vision-desc">We want SNE VAULT to become a trusted, easy-to-use destination for digital account purchases, with helpful guidance and dependable support at every step.</p>
+            <a class="browse-button about-button" href="category.html" data-i18n="about-cta">Explore accounts</a>
         </section>
     </main>
-    <a class="whatsapp-float" href="https://wa.me/237652717609?text=Hello%20SNE%20VAULT%20support%2C%20I%20need%20help%20with%20my%20account." target="_blank" rel="noopener" aria-label="Contact WhatsApp support">
-        <span class="whatsapp-icon"><i class="bi bi-whatsapp" aria-hidden="true"></i></span>
-        <span class="whatsapp-label">Need help? Chat with us</span>
-    </a>
+<script src="i18n.js"></script>
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6aa9c08bd07e5e34429203c2/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
 </body>
 </html>

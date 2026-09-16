@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>(function(){var t=localStorage.getItem('sne-vault-theme');document.documentElement.setAttribute('data-theme',t||'dark')})();</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Downloads | SNE VAULT</title>
@@ -10,18 +11,20 @@
 <body class="downloads-page">
      <header class="legal-header">
         <a class="logo" href="index.html"><img src="logo.jpg" alt="SNE VAULT logo"><span>SNE <b>VAULT</b></span></a>
+        <select class="lang-select" id="lang-select" aria-label="Language"><option value="en">EN</option><option value="fr">FR</option></select>
+        <button class="header-theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode"><i class="bi bi-moon-stars" aria-hidden="true"></i><span class="theme-label">Dark</span></button>
     </header>
     <main class="downloads-container">
         <div class="page-navigation"><a class="downloads-back-link" href="dashboard.html" onclick="if (history.length > 1) { history.back(); return false; }">&larr; Previous page</a><a class="dashboard-home-link" href="dashboard.html"><i class="bi bi-grid-1x2" aria-hidden="true"></i> Dashboard</a></div>
         <header class="downloads-heading">
-            <div><p class="eyebrow">YOUR LIBRARY</p><h1>Downloads</h1><p>Access the accounts you have purchased from SNE VAULT.</p></div>
+            <div><p class="eyebrow" data-i18n="dl-eyebrow">YOUR LIBRARY</p><h1 data-i18n="dl-heading">Downloads</h1><p data-i18n="dl-intro">Access the accounts you have purchased from SNE VAULT.</p></div>
             <a class="browse-button" href="category.html">Buy another account</a>
         </header>
 
         <section class="downloads-summary">
-            <div><span>Available downloads</span><strong>2</strong></div>
-            <div><span>Total purchases</span><strong>12</strong></div>
-            <div><span>Last purchase</span><strong>Aug 18</strong></div>
+            <div><span data-i18n="dl-summary-available">Available downloads</span><strong>2</strong></div>
+            <div><span data-i18n="dl-summary-total">Total purchases</span><strong>12</strong></div>
+            <div><span data-i18n="dl-summary-last">Last purchase</span><strong>Aug 18</strong></div>
         </section>
 
         <section class="downloads-list">
@@ -29,20 +32,30 @@
             <article class="download-card">
                 <span class="download-platform instagram-download-mark">IG</span>
                 <div class="download-details"><div class="download-title"><h3>Instagram - Softwreck Niche A</h3><span class="download-status">Ready</span></div><p>Order #SNV-1048 <span>•</span> Purchased Aug 18, 2026</p><strong>12k followers <span>•</span> Instagram</strong></div>
-                <div class="download-actions"><a class="download-button" href="dashboard.html#recent-orders">View order</a><a class="access-link" href="dashboard.html#login-guide">Access guide</a></div>
+                <div class="download-actions"><a class="download-button" href="dashboard.html#recent-orders" data-i18n="dl-view-order">View order</a><a class="access-link" href="dashboard.html#login-guide" data-i18n="dl-access-guide">Access guide</a></div>
             </article>
             <article class="download-card">
                 <span class="download-platform tiktok-download-mark">TK</span>
                 <div class="download-details"><div class="download-title"><h3>TikTok - Organic Creator</h3><span class="download-status">Ready</span></div><p>Order #SNV-1039 <span>•</span> Purchased Aug 12, 2026</p><strong>5k followers <span>•</span> TikTok</strong></div>
-                <div class="download-actions"><a class="download-button" href="dashboard.html#recent-orders">View order</a><a class="access-link" href="dashboard.html#login-guide">Access guide</a></div>
+                <div class="download-actions"><a class="download-button" href="dashboard.html#recent-orders" data-i18n="dl-view-order">View order</a><a class="access-link" href="dashboard.html#login-guide" data-i18n="dl-access-guide">Access guide</a></div>
             </article>
         </section>
 
         <section class="download-notice"><strong>Keep your account details private</strong><p>Download your purchase only on a trusted device. Never share your login details or security codes with anyone.</p><a href="contact.html">Need help with access?</a></section>
     </main>
-    <a class="whatsapp-float" href="https://wa.me/237652717609?text=Hello%20SNE%20VAULT%20support%2C%20I%20need%20help%20with%20a%20download." target="_blank" rel="noopener" aria-label="Contact WhatsApp support">
-        <span class="whatsapp-icon"><i class="bi bi-whatsapp" aria-hidden="true"></i></span>
-        <span class="whatsapp-label">Need help? Chat with us</span>
-    </a>
+<script src="i18n.js"></script>
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6aa9c08bd07e5e34429203c2/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
 </body>
 </html>

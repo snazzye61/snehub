@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>(function(){var t=localStorage.getItem('sne-vault-theme');document.documentElement.setAttribute('data-theme',t||'dark')})();</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | SNE VAULT</title>
@@ -11,19 +12,21 @@
 <body class="legal-page">
     <header class="legal-header">
         <a class="logo" href="index.html"><img src="logo.jpg" alt="SNE VAULT logo"><span>SNE <b>VAULT</b></span></a>
+        <select class="lang-select" id="lang-select" aria-label="Language"><option value="en">EN</option><option value="fr">FR</option></select>
+        <button class="header-theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode"><i class="bi bi-moon-stars" aria-hidden="true"></i><span class="theme-label">Dark</span></button>
     </header>
 
     <main class="legal-content contact-content">
         <div class="page-navigation"><a class="legal-back-link" href="dashboard.html" onclick="if (history.length > 1) { history.back(); return false; }">&larr; Previous page</a><a class="dashboard-home-link" href="dashboard.html"><i class="bi bi-grid-1x2" aria-hidden="true"></i> Dashboard</a></div>
-        <p class="eyebrow">SNE VAULT SUPPORT</p>
-        <h1>Contact us</h1>
-        <p class="legal-updated">Questions about an order, login, or account delivery? We are here to help.</p>
+        <p class="eyebrow" data-i18n="contact-eyebrow">SNE VAULT SUPPORT</p>
+        <h1 data-i18n="contact-heading">Contact us</h1>
+        <p class="legal-updated" data-i18n="contact-intro">Questions about an order, login, or account delivery? We are here to help.</p>
 
         <section class="contact-grid">
             <a class="contact-card" href="https://wa.me/237652717609?text=Hello%20SNE%20VAULT%20support%2C%20I%20need%20help%20with%20my%20account." target="_blank" rel="noopener">
                 <span class="contact-card-icon whatsapp-card-icon">WA</span>
-                <strong>WhatsApp</strong>
-                <span>Chat with our support team</span>
+                <strong data-i18n="contact-whatsapp">WhatsApp</strong>
+                <span data-i18n="contact-whatsapp-desc">Chat with our support team</span>
                 <b>+237 652 717 609</b>
             </a>
             <a class="contact-card" href="tel:+237652717609">
@@ -47,7 +50,7 @@
         </section>
 
         <section class="legal-section">
-            <h2>What can we help with?</h2>
+            <h2 data-i18n="contact-help-heading">What can we help with?</h2>
             <ul>
                 <li>Problems accessing an account you purchased</li>
                 <li>Order delivery, account details, or download questions</li>
@@ -62,9 +65,19 @@
             <p>Please check your order details and the account-access tutorial in your dashboard first. If the problem continues, send us a short description and we will help you as soon as possible.</p>
         </section>
     </main>
-    <a class="whatsapp-float" href="https://wa.me/237652717609?text=Hello%20SNE%20VAULT%20support%2C%20I%20need%20help%20with%20my%20account." target="_blank" rel="noopener" aria-label="Contact WhatsApp support">
-        <span class="whatsapp-icon"><i class="bi bi-whatsapp" aria-hidden="true"></i></span>
-        <span class="whatsapp-label">Need help? Chat with us</span>
-    </a>
+<script src="i18n.js"></script>
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6aa9c08bd07e5e34429203c2/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
 </body>
 </html>

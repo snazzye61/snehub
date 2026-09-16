@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>(function(){var t=localStorage.getItem('sne-vault-theme');document.documentElement.setAttribute('data-theme',t||'dark')})();</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard | SNE VAULT</title>
@@ -18,11 +19,11 @@
             <div class="dashboard-dropdown">
             <p class="sidebar-label">Workspace</p>
             <nav class="dashboard-nav" aria-label="Dashboard navigation">
-                <a class="dashboard-nav-link active" href="dashboard.html"><i class="bi bi-grid-1x2-fill" aria-hidden="true"></i>Overview</a>
-                <a class="dashboard-nav-link" href="category.html"><i class="bi bi-grid" aria-hidden="true"></i>Browse accounts</a>
-                <a class="dashboard-nav-link" href="orders.html"><i class="bi bi-receipt" aria-hidden="true"></i>Orders</a>
-                <a class="dashboard-nav-link" href="download.html"><i class="bi bi-download" aria-hidden="true"></i>Downloads</a>
-                <a class="dashboard-nav-link" href="wallet.html"><i class="bi bi-wallet2" aria-hidden="true"></i>Wallet</a>
+                <a class="dashboard-nav-link active" href="dashboard.html"><i class="bi bi-grid-1x2-fill" aria-hidden="true"></i><span data-i18n="dash-nav-overview">Overview</span></a>
+                <a class="dashboard-nav-link" href="category.html"><i class="bi bi-grid" aria-hidden="true"></i><span data-i18n="dash-nav-browse">Browse accounts</span></a>
+                <a class="dashboard-nav-link" href="orders.html"><i class="bi bi-receipt" aria-hidden="true"></i><span data-i18n="dash-nav-orders">Orders</span></a>
+                <a class="dashboard-nav-link" href="download.html"><i class="bi bi-download" aria-hidden="true"></i><span data-i18n="dash-nav-downloads">Downloads</span></a>
+                <a class="dashboard-nav-link" href="wallet.html"><i class="bi bi-wallet2" aria-hidden="true"></i><span data-i18n="dash-nav-wallet">Wallet</span></a>
             </nav>
             <p class="sidebar-label resources-label">Resources</p>
             <nav class="dashboard-resource-links" aria-label="Resources">
@@ -43,7 +44,7 @@
                 <div class="dashboard-topbar-main">
                     <div>
                         <p class="eyebrow">Account market</p>
-                        <h1>Good morning, welcome back.</h1>
+                        <h1 data-i18n="dash-topbar-heading">Good morning, welcome back.</h1>
                     </div>
 
                     <div class="search-container">
@@ -54,14 +55,15 @@
                 </div>
 
                 <div class="dashboard-topbar-actions">
+                    <select class="lang-select" id="lang-select" aria-label="Language"><option value="en">EN</option><option value="fr">FR</option></select>
                     <a class="marketplace-link" href="home.html">Marketplace</a>
                     <a class="browse-button" href="category.html">Browse accounts</a>
                 </div>
             </header>
             <section class="dashboard-stats" aria-label="Account overview">
-                <article class="overview-stat"><span class="stat-caption">Total orders</span><strong>12</strong><span class="stat-note positive">+3 this month</span></article>
-                <article class="overview-stat"><span class="stat-caption">Active accounts</span><strong>08</strong><span class="stat-note">Ready to download</span></article>
-                <article class="overview-stat"><span class="stat-caption">Saved accounts</span><strong>24</strong><span class="stat-note">Across 4 categories</span></article>
+                <article class="overview-stat"><span class="stat-caption" data-i18n="dash-total-orders">Total orders</span><strong>12</strong><span class="stat-note positive">+3 this month</span></article>
+                <article class="overview-stat"><span class="stat-caption" data-i18n="dash-active-accounts">Active accounts</span><strong>08</strong><span class="stat-note">Ready to download</span></article>
+                <article class="overview-stat"><span class="stat-caption" data-i18n="dash-saved-accounts">Saved accounts</span><strong>24</strong><span class="stat-note">Across 4 categories</span></article>
             </section>
             <section class="dashboard-section" id="recent-orders">
                 <div class="section-heading"><div><p class="eyebrow">Your activity</p><h2>Recent orders</h2></div><a href="orders.html">View all orders</a></div>
@@ -84,33 +86,9 @@
             <div class="profile-summary">
                 <span class="profile-avatar">JD</span>
                 <div class="profile-meta"><strong>Elias Etinge</strong><span>Premium member</span></div>
-                <div class="profile-menu-wrap">
-                    <button class="profile-menu-button" type="button" aria-label="Open profile menu" aria-expanded="false">
-                        <span aria-hidden="true">...</span>
-                    </button>
-                    <div class="profile-menu" role="menu" aria-label="Profile menu">
-                        <div class="profile-menu-header">Settings</div>
-                        <button class="profile-menu-item" type="button" role="menuitem" data-action="password">Change password</button>
-                        <div class="profile-submenu" id="password-submenu" aria-label="Change password form">
-                            <div class="profile-submenu-title">Security</div>
-                            <label>
-                                <span>New password</span>
-                                <input type="password" name="new-password" placeholder="Enter new password">
-                            </label>
-                            <label>
-                                <span>Confirm password</span>
-                                <input type="password" name="confirm-password" placeholder="Repeat new password">
-                            </label>
-                            <button type="button" class="save-password-button">Save password</button>
-                        </div>
-                        <label class="profile-menu-item toggle-item" role="menuitem">
-                            <span>Accept notifications</span>
-                            <input type="checkbox" checked>
-                        </label>
-                        <a href="download.html" class="profile-menu-item" role="menuitem">Download web app</a>
-                        <a href="contact.html" class="profile-menu-item" role="menuitem">Support</a>
-                        <a href="index.html" class="profile-menu-item logout-item" role="menuitem">Log out</a>
-                    </div>
+                <div class="profile-actions-row">
+                    <a class="profile-settings-btn" href="settings.html"><i class="bi bi-sliders2" aria-hidden="true"></i><span data-i18n="dash-nav-settings">Settings</span></a>
+                    <button class="theme-toggle-btn" type="button" aria-label="Toggle dark mode" data-theme-toggle><i class="bi bi-moon-stars" aria-hidden="true"></i><span class="theme-label">Dark</span></button>
                 </div>
             </div>
 
@@ -126,10 +104,22 @@
             <div class="trust-note"><strong>Protected marketplace</strong><p>Every account is checked before it reaches your dashboard.</p></div>
         </aside>
     </div>
-    <a class="whatsapp-float" href="https://wa.me/237652717609?text=Hello%20SNE%20VAULT%20support%2C%20I%20need%20help%20accessing%20an%20account%20I%20purchased." target="_blank" rel="noopener" aria-label="Contact WhatsApp support">
-        <span class="whatsapp-icon"><i class="bi bi-whatsapp" aria-hidden="true"></i></span>
-        <span class="whatsapp-label">Need help? Chat with us</span>
-    </a>
-    <script src="../mobile-menu.js"></script>
+    <script src="mobile-menu.js"></script>
+    <script src="i18n.js"></script>
+     
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6aa9c08bd07e5e34429203c2/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
 </body>
 </html>
