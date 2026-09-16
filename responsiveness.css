@@ -49,7 +49,7 @@ button, .browse-button, .fund-button, .deposit-btn, .buy-account-button, .downlo
   .dashboard-main, .dashboard-rightbar { padding: 24px 16px 105px; }
   .dashboard-topbar { flex-direction: column; gap: 16px; margin-bottom: 24px; }
   .dashboard-topbar h1 { font-size: 23px; line-height: 1.25; }
-  .dashboard-topbar-actions { width: 100%; justify-content: space-between; }
+  .dashboard-topbar-actions { width: 100%; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
   .dashboard-stats { grid-template-columns: 1fr; gap: 10px; margin-bottom: 24px; }
   .dashboard-section, .login-guide { padding: 18px; }
   .section-heading { align-items: flex-start; }
@@ -66,7 +66,7 @@ button, .browse-button, .fund-button, .deposit-btn, .buy-account-button, .downlo
   .public-header .btn-register { display: inline-flex; min-width: 92px; margin-left: 0; }
   .public-header nav { display: none; }
   .public-header.mobile-menu-open nav { display: grid; right: 12px; }
-  .legal-header, .catalog-header { align-items: flex-start; flex-direction: column; gap: 16px; }
+  .legal-header, .catalog-header { align-items: flex-start; flex-direction: column; gap: 16px; flex-wrap: wrap; }
   .legal-header nav, .catalog-header nav { width: 100%; flex-wrap: wrap; gap: 10px 14px; }
   .legal-header nav a, .catalog-header nav a { min-height: 36px; display: inline-flex; align-items: center; }
   .legal-content, .catalog-container, .downloads-container, .orders-container, .purchase-container, .wallet-container { width: calc(100% - 20px); margin-left: auto; margin-right: auto; padding-top: 28px; }
