@@ -47,39 +47,42 @@ document.querySelectorAll('[data-theme-toggle]').forEach(function(btn) {
 
 const searchInput = document.getElementById("productSearch"); const suggestionsBox = document.getElementById("searchSuggestions");
 const categories = [ "Facebook", "Instagram", "TikTok", "X / Twitter", "Google Voice", "Gmail", "Discord", "Threads", "VPN", "CODM", "Free Fire" ];
-searchInput.addEventListener("input", function () { const query = this.value.trim().toLowerCase();
-suggestionsBox.innerHTML = "";
 
-if (query === "") {
-    suggestionsBox.style.display = "none";
-    return;
-}
+if (searchInput) {
+    searchInput.addEventListener("input", function () { const query = this.value.trim().toLowerCase();
+    suggestionsBox.innerHTML = "";
 
-const matches = categories.filter(category =>
-    category.toLowerCase().includes(query)
-);
-
-if (matches.length === 0) {
-    suggestionsBox.style.display = "none";
-    return;
-}
-
-matches.forEach(category => {
-    const item = document.createElement("div");
-
-    item.classList.add("suggestion-item");
-    item.innerHTML = `<strong>${category}</strong>`;
-
-    item.addEventListener("click", function () {
-        searchInput.value = category;
+    if (query === "") {
         suggestionsBox.style.display = "none";
+        return;
+    }
 
-        // You can later connect this to your category pages
-        console.log("Searching for:", category);
+    const matches = categories.filter(category =>
+        category.toLowerCase().includes(query)
+    );
+
+    if (matches.length === 0) {
+        suggestionsBox.style.display = "none";
+        return;
+    }
+
+    matches.forEach(category => {
+        const item = document.createElement("div");
+
+        item.classList.add("suggestion-item");
+        item.innerHTML = `<strong>${category}</strong>`;
+
+        item.addEventListener("click", function () {
+            searchInput.value = category;
+            suggestionsBox.style.display = "none";
+
+            // You can later connect this to your category pages
+            console.log("Searching for:", category);
+        });
+
+        suggestionsBox.appendChild(item);
     });
 
-    suggestionsBox.appendChild(item);
-});
-
-suggestionsBox.style.display = "block";
-});
+    suggestionsBox.style.display = "block";
+    });
+}
