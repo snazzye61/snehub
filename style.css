@@ -938,7 +938,6 @@ p a:hover{
     background-color:var(--primary);;
     color: var(--text-primary);
     padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-    box-shadow: 0 0 10px 2.1 black;
     border-radius: 0.3rem;
     text-decoration: none;
     transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
@@ -947,7 +946,6 @@ p a:hover{
 
 .log-home:hover{
      background-color: var(--primary-hover);
-    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.45);
     transform: translateY(-3px);
     color: var(--text-primary);
 
@@ -1518,7 +1516,9 @@ button, .browse-button, .fund-button, .deposit-btn, .buy-account-button, .downlo
     text-align: center;
 }
 
-.auth-switch a { margin-left: 4px; color: var(--accent); font-weight: 700; }
+.auth-switch a,
+.forgot-password-link { color: var(--accent); font-weight: 700; }
+.auth-switch a { margin-left: 4px; }
 
 .auth-message {
     min-height: 18px;
