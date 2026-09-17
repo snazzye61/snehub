@@ -74,27 +74,6 @@
         };
 
         toggleDashboardLinks();
-
-        document.addEventListener('click', (event) => {
-            const buyButton = event.target.closest('.buy-account-button');
-            const viewDetailsLink = event.target.closest('a') && event.target.closest('a').textContent.trim().toLowerCase().includes('view details') ? event.target.closest('a') : null;
-
-            if (!buyButton && !viewDetailsLink) return;
-
-            if (!session) {
-                event.preventDefault();
-                window.location.href = 'login.html';
-                return;
-            }
-
-            const link = buyButton || viewDetailsLink;
-            const listing = link.closest('.account-listing');
-            const product = listing?.querySelector('h4')?.textContent || 'Account';
-            const price = listing?.querySelector('.listing-bottom > strong')?.textContent.replace('$', '').trim() || '0.00';
-
-            event.preventDefault();
-            window.location.href = `purchase.html?product=${encodeURIComponent(product)}&price=${price}`;
-        }, true);
     </script>
 
     <script>
