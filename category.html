@@ -60,6 +60,43 @@
         <section class="catalog-platform compact-platform" id="gaming"><div class="platform-heading"><div><p class="eyebrow">GAMING ACCOUNTS</p><h2>Choose a game category</h2></div><span>70+ accounts available</span></div><nav class="subcategory-tabs"><a href="#codm">Call of Duty Mobile</a><a href="#freefire">Free Fire</a></nav><div class="listing-section" id="codm"><div class="listing-heading"><h3>Call of Duty Mobile accounts</h3><span>40 accounts available</span></div></div><div class="listing-section" id="freefire"><div class="listing-heading"><h3>Free Fire accounts</h3><span>30 accounts available</span></div></div></section>
         <div class="catalog-help"><strong>Need help choosing?</strong><p>Contact support for help understanding account details before you purchase.</p><a href="contact.html">Contact support</a></div>
     </main>
+    <script type="module">
+        import { supabase } from './js/supabase.js';
+
+        const dashboardHomeLink = document.querySelector('.dashboard-home-link');
+        const headerDashboardLink = document.querySelector('#catalog-nav a[href="dashboard.html"]');
+        const { data: { session } } = await supabase.auth.getSession();
+
+        const toggleDashboardLinks = () => {
+            const showDashboard = Boolean(session);
+            if (dashboardHomeLink) dashboardHomeLink.style.display = showDashboard ? '' : 'none';
+            if (headerDashboardLink) headerDashboardLink.style.display = showDashboard ? '' : 'none';
+        };
+
+        toggleDashboardLinks();
+
+        document.addEventListener('click', (event) => {
+            const buyButton = event.target.closest('.buy-account-button');
+            const viewDetailsLink = event.target.closest('a') && event.target.closest('a').textContent.trim().toLowerCase().includes('view details') ? event.target.closest('a') : null;
+
+            if (!buyButton && !viewDetailsLink) return;
+
+            if (!session) {
+                event.preventDefault();
+                window.location.href = 'login.html';
+                return;
+            }
+
+            const link = buyButton || viewDetailsLink;
+            const listing = link.closest('.account-listing');
+            const product = listing?.querySelector('h4')?.textContent || 'Account';
+            const price = listing?.querySelector('.listing-bottom > strong')?.textContent.replace('$', '').trim() || '0.00';
+
+            event.preventDefault();
+            window.location.href = `purchase.html?product=${encodeURIComponent(product)}&price=${price}`;
+        }, true);
+    </script>
+
     <script>
         const catalogPage = document.querySelector('.catalog-page');
         const platformSections = document.querySelectorAll('.catalog-platform');
@@ -232,6 +269,12 @@
 
         document.querySelectorAll('.buy-account-button').forEach((button) => {
             button.addEventListener('click', (event) => {
+                if (!session) {
+                    event.preventDefault();
+                    window.location.href = 'login.html';
+                    return;
+                }
+
                 event.preventDefault();
                 const listing = button.closest('.account-listing');
                 const product = listing.querySelector('h4').textContent;
@@ -241,15 +284,5 @@
         });
     </script>
    <script type="module" src="mobile-menu.js"></script>
-
-<script type="module">
-    import { supabase } from './js/supabase.js';
-
-    const { data: { session } } = await supabase.auth.getSession();
-
-    if (!session) {
-        window.location.href = 'login.html';
-    }
-</script>
 </body>
 </html>
