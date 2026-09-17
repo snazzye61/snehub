@@ -17,7 +17,9 @@ export default defineConfig({
         contact: 'contact.html',
         faq: 'faq.html',
         privacy: 'privacy-policy.html',
-        settings: 'settings.html'
+        settings: 'settings.html',
+        forgotPassword: 'forgot-password.html',
+        resetPassword: 'reset-password.html',
       }
     }
   }

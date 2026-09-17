@@ -35,7 +35,7 @@
                 <a href="about.html"><i class="bi bi-info-circle" aria-hidden="true"></i>About us</a>
             </nav>
             <div class="sidebar-help"><p class="sidebar-label">Need help?</p><p>Our support team is ready to help with your order.</p><a href="contact.html">Contact support</a></div>
-            <a class="dashboard-logout" href="index.html"><i class="bi bi-box-arrow-left" aria-hidden="true"></i> Log out</a>
+           <a class="dashboard-logout" href="#" id="logout-button"><i class="bi bi-box-arrow-left" aria-hidden="true"></i> Log out</a>
             </div>
         </aside>
 
@@ -121,5 +121,32 @@ s0.parentNode.insertBefore(s1,s0);
 </script>
 <!--End of Tawk.to Script-->
 
+
+<!-- start of logout script -->
+ <script type="module">
+    import { supabase } from './js/supabase.js';
+
+    const { data: { session } } = await supabase.auth.getSession();
+
+    if (!session) {
+        window.location.href = 'login.html';
+    } else {
+        const logoutButton = document.getElementById('logout-button');
+
+        logoutButton.addEventListener('click', async (event) => {
+            event.preventDefault();
+
+            const { error } = await supabase.auth.signOut();
+
+            if (error) {
+                alert(error.message);
+                return;
+            }
+
+            window.location.href = 'index.html';
+        });
+    }
+</script>
+<!-- end of logout script -->
 </body>
 </html>
