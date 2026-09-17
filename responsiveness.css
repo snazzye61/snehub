@@ -224,8 +224,24 @@ button, .browse-button, .fund-button, .deposit-btn, .buy-account-button, .downlo
   .catalog-header.mobile-menu-open nav { display: grid; position: absolute; top: calc(100% + 8px); right: 12px; z-index: 20; width: min(220px, calc(100vw - 24px)); gap: 0; padding: 8px; border: 1px solid var(--border-light); border-radius: 8px; background: var(--bg-surface); box-shadow: 0 12px 28px rgba(0, 0, 0, .35); }
   .public-header.mobile-menu-open nav a,
   .catalog-header.mobile-menu-open nav a { display: flex; align-items: center; min-height: 42px; padding: 8px 10px; border-radius: 5px; }
+  .public-header.mobile-menu-open nav a,
+  .catalog-header.mobile-menu-open nav a { border: 1px solid transparent; color: var(--text-secondary); text-decoration: none; transition: background-color .2s ease, border-color .2s ease, color .2s ease, transform .2s ease; }
+  .public-header.mobile-menu-open nav a + a,
+  .catalog-header.mobile-menu-open nav a + a { margin-top: 4px; }
   .public-header.mobile-menu-open nav a:hover,
-  .catalog-header.mobile-menu-open nav a:hover { background: var(--bg-overlay); }
+  .public-header.mobile-menu-open nav a:focus-visible,
+  .public-header.mobile-menu-open nav a:active,
+  .catalog-header.mobile-menu-open nav a:hover,
+  .catalog-header.mobile-menu-open nav a:focus-visible,
+  .catalog-header.mobile-menu-open nav a:active { border-color: var(--border-light); background: var(--bg-overlay); color: var(--text-primary); transform: translateX(3px); outline: none; }
+  .public-header.mobile-menu-open nav a.btn-login,
+  .catalog-header.mobile-menu-open nav a.btn-login { justify-content: center; margin-top: 8px; border-color: var(--primary); background: var(--primary); color: var(--text-primary); font-weight: 700; }
+  .public-header.mobile-menu-open nav a.btn-login:hover,
+  .public-header.mobile-menu-open nav a.btn-login:focus-visible,
+  .public-header.mobile-menu-open nav a.btn-login:active,
+  .catalog-header.mobile-menu-open nav a.btn-login:hover,
+  .catalog-header.mobile-menu-open nav a.btn-login:focus-visible,
+  .catalog-header.mobile-menu-open nav a.btn-login:active { border-color: var(--primary-hover); background: var(--primary-hover); transform: translateY(-1px); }
   .public-header .mobile-menu-toggle { margin-left: 0; }
   .catalog-header { flex-wrap: wrap; }
   .catalog-header .mobile-menu-toggle { margin-left: auto; }
