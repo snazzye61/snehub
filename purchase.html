@@ -19,49 +19,25 @@
             <section class="purchase-card"><label class="quantity-label" for="quantity">How many accounts do you need?</label><div class="quantity-control"><button type="button" id="decrease-quantity" aria-label="Decrease quantity">-</button><input id="quantity" type="number" min="1" max="20" value="1" required><button type="button" id="increase-quantity" aria-label="Increase quantity">+</button></div><p class="quantity-note">You can purchase up to 20 accounts in one order.</p></section>
             <section class="purchase-summary"><div><span>Unit price</span><strong>$<span id="summary-unit-price">18.00</span></strong></div><div><span>Quantity</span><strong>x<span id="summary-quantity">1</span></strong></div><div class="purchase-total"><span>Total</span><strong>$<span id="total-price">18.00</span></strong></div></section>
             <button class="purchase-button" type="submit"><i class="bi bi-lock-fill" aria-hidden="true"></i> Confirm purchase</button>
+
+
             <p class="purchase-confirmation" id="purchase-confirmation" hidden>Purchase request received. Your order will appear after payment confirmation.</p>
         </form>
         <div class="purchase-help"><i class="bi bi-shield-check" aria-hidden="true"></i><span>Review the account details carefully before confirming. Need help? <a href="contact.html">Contact support</a>.</span></div>
     </main>
-    <script>
-        const params = new URLSearchParams(window.location.search);
-        const productName = params.get('product') || 'Facebook Aged 2020';
-        const unitPrice = Number(params.get('price')) || 18;
-        const quantityInput = document.getElementById('quantity');
-        const productNameElement = document.getElementById('product-name');
-        const unitPriceElement = document.getElementById('unit-price');
-        const summaryUnitPrice = document.getElementById('summary-unit-price');
-        const summaryQuantity = document.getElementById('summary-quantity');
-        const totalPrice = document.getElementById('total-price');
-        const confirmation = document.getElementById('purchase-confirmation');
+  
 
-        productNameElement.textContent = productName;
-        unitPriceElement.textContent = unitPrice.toFixed(2);
-        summaryUnitPrice.textContent = unitPrice.toFixed(2);
+<!-- script for purchase js -->
+ 
+<!-- script for purchase js -->
 
-        function updateTotal() {
-            const quantity = Math.min(20, Math.max(1, Number(quantityInput.value) || 1));
-            quantityInput.value = quantity;
-            summaryQuantity.textContent = quantity;
-            totalPrice.textContent = (unitPrice * quantity).toFixed(2);
-        }
 
-        document.getElementById('decrease-quantity').addEventListener('click', () => { quantityInput.value = Math.max(1, Number(quantityInput.value) - 1); updateTotal(); });
-        document.getElementById('increase-quantity').addEventListener('click', () => { quantityInput.value = Math.min(20, Number(quantityInput.value) + 1); updateTotal(); });
-        quantityInput.addEventListener('input', updateTotal);
-        document.getElementById('purchase-form').addEventListener('submit', (event) => { event.preventDefault(); confirmation.hidden = false; confirmation.textContent = `Purchase request received for ${quantityInput.value} ${productName} account(s), total $${(unitPrice * Number(quantityInput.value)).toFixed(2)}. Continue to payment to complete your order.`; });
-    </script>
-
-    <script type="module">
-        import { supabase } from './js/supabase.js';
-
-        const { data: { session } } = await supabase.auth.getSession();
-
-        if (!session) {
-            window.location.href = 'login.html';
-        }
-    </script>
 
     <script type="module" src="js/tawk.js"></script>
+
+    <script type="module" src="js/auth-guard.js"></script>
+
+    <script type="module" src="js/purchase-product.js"></script>
+
 </body>
 </html>

@@ -25,10 +25,15 @@ registerForm.addEventListener('submit', async (event) => {
         }
     });
 
-    if (error) {
+   if (error) {
+    if (error.message.toLowerCase().includes('already registered')) {
+        alert('This email is already registered. Please log in instead.');
+    } else {
         alert(error.message);
-        return;
     }
+
+    return;
+}
 
     console.log('Registration successful:', data);
     alert('Account created! Please check your email to confirm your account.');
